@@ -18,3 +18,10 @@ export interface IIconLink {
   href: string;
   Icon: IconType;
 }
+
+export interface INavComponent {
+  name: string;
+  isActive: boolean;
+  href: string;
+  Icon: IconType;
+}

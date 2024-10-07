@@ -1,5 +1,16 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaTelegram } from "react-icons/fa";
-import { IIconLink } from "../interfaces/main.interface";
+import {
+  FaBook,
+  FaGithub,
+  FaHome,
+  FaInstagram,
+  FaLinkedin,
+  FaPhone,
+  FaTelegram,
+  FaUser,
+  FaUserGraduate,
+} from "react-icons/fa";
+import { IIconLink, INavComponent } from "../interfaces/main.interface";
+import { FaMessage } from "react-icons/fa6";
 
 export const IconLinks: IIconLink[] = [
   {
@@ -21,5 +32,38 @@ export const IconLinks: IIconLink[] = [
     name: "Instagram",
     href: "https://instagram.com/",
     Icon: FaInstagram,
+  },
+];
+
+export const navData: INavComponent[] = [
+  {
+    name: "Home",
+    href: "#home",
+    Icon: FaHome,
+    isActive: false,
+  },
+  {
+    name: "About",
+    href: "#about",
+    Icon: FaUser,
+    isActive: false,
+  },
+  {
+    name: "Resume",
+    href: "#resume",
+    Icon: FaBook,
+    isActive: false,
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+    Icon: FaUserGraduate,
+    isActive: false,
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+    Icon: FaPhone,
+    isActive: false,
   },
 ];

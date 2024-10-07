@@ -7,14 +7,11 @@ import RightSide from "@src/app/pages/components/RightSide/RightSide";
 const Home: FC = (): ReactElement => {
   return (
     <>
-      <div className="w-screen h-screen flex flex-row m-0 p-0">
-        <div className="fixed top-0 left-0 bottom-0 transition ease-in-out delay-300 overflow-y-auto z-50 px-12  bg-[#040b14]">
-          <LeftSide />
-        </div>
-       
-        <div className="ml-[300px] flex flex-row p-1">
-          <RightSide />
-        </div>
+      <div className="lg:block hidden fixed w-[300px] top-0 left-0 bottom-0 transition ease-in-out delay-300 overflow-y-auto z-50 overflow-hidden bg-[#040b14]">
+        <LeftSide />
+      </div>
+      <div className="lg:ml-[300px] bg-[#040b14]">
+        <RightSide />
       </div>
     </>
   );
