@@ -1,10 +1,10 @@
 import React from "react";
-import Avatar from "./components/Avatar";
+import Avatar from "@src/app/pages/components/LeftSide/components/Avatar";
 import { IconLinks } from "@src/app/utils/data.utils";
-import SocialCircles from "./components/SocialCircles";
+import SocialCircles from "@src/app/pages/components/LeftSide/components/SocialCircles";
 import { v4 as uuidv4 } from "uuid";
 import { IIconLink } from "@src/app/interfaces/main.interface";
-import NavComponent from "./components/NavComponent";
+import NavComponent from "@src/app/pages/components/LeftSide/components/NavComponent";
 
 const LeftSide: React.FC = (): React.ReactElement => {
   return (

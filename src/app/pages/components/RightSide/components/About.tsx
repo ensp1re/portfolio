@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
-import InfoItem from "./InfoItem";
+import InfoItem from "@src/app/pages/components/RightSide/components/InfoItem";
 import { motion } from "framer-motion";
 
 const About: FC = (): ReactElement => {

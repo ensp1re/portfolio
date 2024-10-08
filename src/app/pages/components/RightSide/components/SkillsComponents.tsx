@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const SlickComponents: React.FC = (): ReactElement => {
+const SkillsComponents: React.FC = (): ReactElement => {
   // Настройки для карусели
   const webSettings = {
     dots: false,
@@ -151,4 +151,4 @@ const SlickComponents: React.FC = (): ReactElement => {
   );
 };
 
-export default SlickComponents;
+export default SkillsComponents;

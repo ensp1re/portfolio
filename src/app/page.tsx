@@ -1,5 +1,5 @@
-import { StateProvider } from "./context/StateContext";
-import Home from "./pages/Home";
+import { StateProvider } from "@src/app/context/StateContext";
+import Home from "@src/app/pages/Home";
 
 export default function Page() {
   return (

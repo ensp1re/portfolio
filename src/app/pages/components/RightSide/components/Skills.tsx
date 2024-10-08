@@ -1,5 +1,5 @@
 import { FC, ReactElement } from "react";
-import SlickComponents from "./SlickComponents";
+import SlickComponents from "@src/app/pages/components/RightSide/components/SkillsComponents";
 import { motion } from "framer-motion";
 
 const Skills: FC = (): ReactElement => {
