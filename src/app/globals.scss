@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
 body {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -22,11 +24,11 @@ section {
   padding-right: 20px;
   padding-left: 20px;
   margin: 0 auto;
-  
 }
 
-
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -39,8 +41,44 @@ p {
   unicode-bidi: isolate;
 }
 
-h1, p, h2, ul, li {
+h1,
+p,
+h2,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
+.section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  left: 0;
+  bottom: -13px;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+.custom-resume::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: white;
+  border: 2px solid #149ddd;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}

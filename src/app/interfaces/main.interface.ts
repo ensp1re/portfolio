@@ -1,6 +1,5 @@
 import { IconType } from "react-icons";
 
-
 export interface IAvatarComponent {
   src: string;
   size: number;
@@ -24,4 +23,9 @@ export interface INavComponent {
   isActive: boolean;
   href: string;
   Icon: IconType;
+}
+
+export interface IInfoItem {
+  label: string;
+  value: string;
 }

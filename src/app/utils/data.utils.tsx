@@ -38,31 +38,31 @@ export const IconLinks: IIconLink[] = [
 export const navData: INavComponent[] = [
   {
     name: "Home",
-    href: "#home",
+    href: "home",
     Icon: FaHome,
     isActive: false,
   },
   {
     name: "About",
-    href: "#about",
+    href: "about",
     Icon: FaUser,
     isActive: false,
   },
   {
     name: "Resume",
-    href: "#resume",
+    href: "resume",
     Icon: FaBook,
     isActive: false,
   },
   {
     name: "Skills",
-    href: "#skills",
+    href: "skills",
     Icon: FaUserGraduate,
     isActive: false,
   },
   {
     name: "Contact",
-    href: "#contact",
+    href: "contact",
     Icon: FaPhone,
     isActive: false,
   },
