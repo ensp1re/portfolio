@@ -38,7 +38,7 @@ const Main: FC = (): ReactElement => {
           Oleksandr
         </h1>
         <p className="flex gap-2 text-white text-[18px] sm:text-[22px] lg:text-[26px] flex-row">
-          I'm{" "}
+          I&apos;m{" "}
           <TypeAnimation
             cursor={true}
             sequence={["a Developer", "a FullStack", "a Freelancer"]}

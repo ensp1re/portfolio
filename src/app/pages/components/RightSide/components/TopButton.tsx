@@ -17,7 +17,7 @@ const TopButton: FC<ITopButton> = ({ setActive, onClick }) => {
     >
       <FaAngleUp />
     </button>
-  )
+  );
 };
 
 export default TopButton;

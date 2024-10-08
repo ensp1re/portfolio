@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import { FC, ReactElement, useEffect, useRef, useState } from "react";
 import LeftSide from "@src/app/pages/components/LeftSide/LeftSide";
@@ -18,13 +18,16 @@ const raleway = Raleway({
 const Home: FC = (): ReactElement => {
   const { setActiveSection, isOpen, setIsOpen } = useStateContext();
   const [loading, setLoading] = useState(true);
-  const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
+  const [isLgScreen, setIsLgScreen] = useState(false);
   const leftSide = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    setIsLgScreen(window.innerWidth >= 1024);
+
     const handleResize = () => {
       setIsLgScreen(window.innerWidth >= 1024);
     };
+
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -95,8 +98,8 @@ const Home: FC = (): ReactElement => {
             id="menu"
             className="flex justify-center items-center lg:hidden rounded-full p-1 fixed top-0 right-0 mr-3 mt-3 bg-sky-400 z-[1000]"
             onClick={() => {
-              console.log("Button clicked, isOpen:", isOpen); // Проверяем текущее значение isOpen
-              setIsOpen(!isOpen); // Меняем состояние
+              console.log("Button clicked, isOpen:", isOpen);
+              setIsOpen(!isOpen);
             }}
           >
             <MdMenu className="text-slate-50 text-2xl" />

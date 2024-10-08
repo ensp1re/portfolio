@@ -15,8 +15,6 @@ const NavComponent = () => {
     }
   };
 
- 
-
   return (
     <nav className="flex items-center whitespace-nowrap transition duration-300 w-full text-nav-color font-poppins text-[16px] font-normal">
       <ul className="list-none">

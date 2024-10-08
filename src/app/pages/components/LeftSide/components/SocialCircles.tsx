@@ -11,7 +11,7 @@ const SocialCircles: FC<ISocialCircle> = ({
     <Link
       href={href}
       target={isBlank ? "_blank" : ""}
-      className="text-lg inline-flex items-center justify-center text-white bg-gray-800 rounded-full text-center w-[40px] h-[40px] hover:bg-[#149ddd] transition ease-in-out delay-75" 
+      className="text-lg inline-flex items-center justify-center text-white bg-gray-800 rounded-full text-center w-[40px] h-[40px] hover:bg-[#149ddd] transition ease-in-out delay-75"
     >
       <Icon />
     </Link>

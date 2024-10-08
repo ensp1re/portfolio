@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import '@src/app/globals.scss'
-import {Roboto} from 'next/font/google'
+import "@src/app/globals.scss";
+import { Roboto } from "next/font/google";
 
-
-const roboto = Roboto({subsets: ['latin'], weight: ["400", "700"]})
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Portfolio | Ostapuk",
@@ -17,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${roboto.className} bg-slate-50`}
-      >
-        {children}
-      </body>
+      <body className={`${roboto.className} bg-slate-50`}>{children}</body>
     </html>
-  )
+  );
 }

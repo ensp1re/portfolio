@@ -5,7 +5,7 @@ const Contact: FC = (): ReactElement => {
     <section id="contact" className="w-full min-h-screen container">
       <h2>Contact</h2>
     </section>
-  )
+  );
 };
 
 export default Contact;
