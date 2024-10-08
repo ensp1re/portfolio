@@ -40,7 +40,7 @@ const RightSide: FC = (): ReactElement => {
         </div>
       )}
     </main>
-  )
-}
+  );
+};
 
 export default RightSide;

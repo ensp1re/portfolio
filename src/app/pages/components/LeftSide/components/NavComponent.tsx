@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { navData } from "@src/app/utils/data.utils";
 import { INavComponent } from "@src/app/interfaces/main.interface";
