@@ -7,7 +7,6 @@ const SocialCircles: FC<ISocialCircle> = ({
   href,
   Icon,
 }): ReactElement => {
-  console.log(isBlank, href, Icon);
   return (
     <Link
       href={href}

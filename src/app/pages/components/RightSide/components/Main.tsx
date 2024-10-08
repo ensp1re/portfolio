@@ -31,18 +31,20 @@ const Main: FC = (): ReactElement => {
         viewport={{ once: true }}
         className="flex w-full text-white text-start justify-center m-0 flex-col z-[2]"
       >
-        <h1 className={`font-bold text-[46px] ${raleway.className}`}>
+        <h1
+          className={`font-bold text-[30px] sm:text-[36px] lg:text-[46px] ${raleway.className}`}
+        >
           Ostapuk <br className="lg:hidden" />
           Oleksandr
         </h1>
-        <p className="flex gap-2 text-white text-[26px] flex-column">
+        <p className="flex gap-2 text-white text-[18px] sm:text-[22px] lg:text-[26px] flex-row">
           I'm{" "}
           <TypeAnimation
             cursor={true}
             sequence={["a Developer", "a FullStack", "a Freelancer"]}
             repeat={Infinity}
             speed={5}
-            wrapper="p"
+            wrapper="span"
             className={`underline underline-offset-4 decoration-blue-400`}
           />
         </p>

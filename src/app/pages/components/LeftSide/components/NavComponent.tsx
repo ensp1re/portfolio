@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { navData } from "@src/app/utils/data.utils";
 import { INavComponent } from "@src/app/interfaces/main.interface";
 import { useStateContext } from "@src/app/context/StateContext";
 
 const NavComponent = () => {
-  const { activeSection, setActiveSection } = useStateContext();
+  const { activeSection, setActiveSection, setIsOpen } = useStateContext();
 
   const handleLinkClick = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -14,6 +14,8 @@ const NavComponent = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+ 
 
   return (
     <nav className="flex items-center whitespace-nowrap transition duration-300 w-full text-nav-color font-poppins text-[16px] font-normal">
@@ -25,8 +27,9 @@ const NavComponent = () => {
                 href="#"
                 className={`flex text-[16px] text-[#a8a9b4] items-center w-full py-[15px] px-2.5`}
                 onClick={(e) => {
-                  e.preventDefault(); 
+                  e.preventDefault();
                   handleLinkClick(item.href);
+                  setIsOpen(false);
                 }}
               >
                 <item.Icon
@@ -34,7 +37,11 @@ const NavComponent = () => {
                     activeSection === item.href ? "text-[#149ddd]" : ""
                   } mr-[10px]`}
                 />
-                <span className={`${activeSection === item.href ? "text-white" : ""}`}>
+                <span
+                  className={`${
+                    activeSection === item.href ? "text-white" : ""
+                  }`}
+                >
                   {item.name}
                 </span>
               </Link>

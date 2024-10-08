@@ -16,7 +16,7 @@ const raleway = Raleway({
 });
 
 const Home: FC = (): ReactElement => {
-  const { setActiveSection } = useStateContext();
+  const { setActiveSection, isOpen, setIsOpen } = useStateContext();
   const [loading, setLoading] = useState(true);
   const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
   const leftSide = useRef<HTMLDivElement>(null);
@@ -32,12 +32,14 @@ const Home: FC = (): ReactElement => {
   }, []);
 
   useEffect(() => {
+    const menu = document.getElementById("menu");
     const handleClickOutside = (event: MouseEvent) => {
       if (
         leftSide.current &&
-        !leftSide.current.contains(event.target as Node)
+        !leftSide.current.contains(event.target as Node) &&
+        !menu?.contains(event.target as Node)
       ) {
-        setIsOpen(false); 
+        setIsOpen(false);
       }
     };
 
@@ -90,8 +92,12 @@ const Home: FC = (): ReactElement => {
       ) : (
         <>
           <button
+            id="menu"
             className="flex justify-center items-center lg:hidden rounded-full p-1 fixed top-0 right-0 mr-3 mt-3 bg-sky-400 z-[1000]"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              console.log("Button clicked, isOpen:", isOpen); // Проверяем текущее значение isOpen
+              setIsOpen(!isOpen); // Меняем состояние
+            }}
           >
             <MdMenu className="text-slate-50 text-2xl" />
           </button>
@@ -113,7 +119,7 @@ const Home: FC = (): ReactElement => {
             </div>
           </Transition>
 
-          <div className={`${isLgScreen ? "lg:ml-[300px]" : ""} bg-[#040b14]`}>
+          <div className={`${isLgScreen ? "lg:ml-[300px]" : ""}`}>
             <RightSide />
           </div>
         </>

@@ -10,7 +10,6 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 import { IIconLink, INavComponent } from "../interfaces/main.interface";
-import { FaMessage } from "react-icons/fa6";
 
 export const IconLinks: IIconLink[] = [
   {
