@@ -18,15 +18,18 @@ const Card: FC<ICardComponent> = ({ title, href, image }): ReactElement => {
           setIsFullScreen(fullScreen);
         }}
       >
-        <Image
-          src={image}
-          alt={title}
-          width={1920}
-          height={1080}
-          className={`object-cover w-full h-full rounded-md transform transition-transform duration-500 ease-in-out group-hover:scale-110 ${
-            isFullScreen ? "fullscreen-image" : ""
-          }`}
-        />
+        <div className="w-full h-full">
+          <Image
+            src={image}
+            alt={title}
+            width={1920}
+            height={1080}
+            className={`object-cover w-full h-full rounded-md transform transition-transform duration-500 ease-in-out group-hover:scale-110 ${
+              isFullScreen ? "fullscreen-image" : ""
+            }`}
+          />
+        </div>
+
         <div className="absolute inset-0 flex flex-col items-center justify-center space-y-4 text-slate-50 text-lg font-bold opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 bg-black bg-opacity-30">
           <div className="flex space-x-4">
             {!isFullScreen && (
