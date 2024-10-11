@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Card from "./Card";
 import { projectData } from "@src/app/utils/data.utils";
 import { v4 as uuidv4 } from "uuid";
+import { ICardComponent } from "@src/app/interfaces/main.interface";
 
 const Projects: FC = (): ReactElement => {
   return (
@@ -19,7 +20,7 @@ const Projects: FC = (): ReactElement => {
       </h2>
       <ul className="flex flex-wrap w-full list-none m-0 p-0 gap-6 justify-between">
         {projectData &&
-          projectData.map((project, _index) => {
+          projectData.map((project: ICardComponent) => {
             return (
               <Card
                 key={uuidv4()}

@@ -5,7 +5,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaListOl,
-  FaPhone,
   FaTelegram,
   FaUser,
   FaUserGraduate,

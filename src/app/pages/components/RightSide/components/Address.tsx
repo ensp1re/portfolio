@@ -1,5 +1,4 @@
 import React, { FC, ReactElement } from "react";
-import { FiPhone } from "react-icons/fi";
 import { TfiEmail, TfiLocationPin } from "react-icons/tfi";
 import GoogleMaps from "./GoogleMaps";
 

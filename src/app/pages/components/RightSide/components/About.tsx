@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC, lazy, ReactElement } from "react";
+import { FC, ReactElement } from "react";
 import InfoItem from "@src/app/pages/components/RightSide/components/InfoItem";
 import { motion } from "framer-motion";
 
@@ -69,7 +69,7 @@ const About: FC = (): ReactElement => {
           </ul>
           <p>
             I enjoy learning about the latest technologies in web development.
-            My goal is to make software that meets users' needs and is easy to
+            My goal is to make software that meets users needs and is easy to
             understand. I believe good communication and teamwork are important
             for success in any project.
           </p>

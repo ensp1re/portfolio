@@ -3,7 +3,7 @@ import Main from "@src/app/pages/components/RightSide/components/Main";
 import About from "@src/app/pages/components/RightSide/components/About";
 import Resume from "@src/app/pages/components/RightSide/components/Resume";
 import Skills from "@src/app/pages/components/RightSide/components/Skills";
-import Contact from "@src/app/pages/components/RightSide/components/Contact";
+// import Contact from "@src/app/pages/components/RightSide/components/Contact";
 import TopButton from "@src/app/pages/components/RightSide/components/TopButton";
 import Projects from "@src/app/pages/components/RightSide/components/Projects";
 import Footer from "@src/app/pages/components/RightSide/components/Footer";
