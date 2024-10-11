@@ -149,12 +149,14 @@ const Resume: FC = (): ReactElement => {
         </div> */}
       </div>
       <div className="w-full p-2 flex justify-center items-center">
-        <button
-          type="button"
-          className="rounded-lg border border-sky-300 bg-sky-400 text-white hover:bg-sky-300 transition duration-300 px-6 py-2"
-        >
-          Download CV
-        </button>
+        <a href={"resume.pdf"} download>
+          <button
+            type="button"
+            className="rounded-lg border border-sky-300 bg-sky-400 text-white hover:bg-sky-300 transition duration-300 px-6 py-2"
+          >
+            Download CV
+          </button>
+        </a>
       </div>
     </motion.section>
   );
