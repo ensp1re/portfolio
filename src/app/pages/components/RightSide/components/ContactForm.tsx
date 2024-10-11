@@ -7,7 +7,7 @@ const ContactForm: FC = (): ReactElement => {
   const [message, setMessage] = useState<string>("");
 
   return (
-    <form className="not-italic form-box bg-slate-50 shadow-lg p-10">
+    <form className="not-italic w-full form-box bg-slate-50 shadow-lg p-10">
       <div className="grid md:grid-cols-2 md:gap-6">
         <div className="relative z-0 w-full mb-5 group">
           <input
