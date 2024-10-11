@@ -10,7 +10,7 @@ const Card: FC<ICardComponent> = ({ title, href, image }): ReactElement => {
   const fullscreenHandle = useFullScreenHandle();
 
   return (
-    <li className="relative min-w-[400px] h-[270px] bg-white shadow-md rounded-md overflow-hidden group m-0 p-0 flex-grow">
+    <li className="relative min-w-[300px] h-[270px] bg-white shadow-md rounded-md overflow-hidden group m-0 p-0 flex-grow">
       <FullScreen
         className="w-full h-full"
         handle={fullscreenHandle}
