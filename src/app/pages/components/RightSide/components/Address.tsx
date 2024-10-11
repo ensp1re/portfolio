@@ -12,10 +12,10 @@ const Address: FC = (): ReactElement => {
         </div>
         <div className="text-center md:text-left">
           <h3 className="p-0 text-lg font-bold">Address</h3>
-          <p className="text-sm">A108 Adam Street, New York, NY 535022</p>
+          <p className="text-sm">Lutsk, Ukraine</p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 items-center mb-5">
+      {/* <div className="flex flex-col md:flex-row gap-4 items-center mb-5">
         <div className="flex justify-center text-sky-400 hover:text-sky-50 items-center rounded-full p-2 bg-opacity-92 bg-sky-200 hover:bg-sky-400 transition duration-300 cursor-pointer">
           <FiPhone className="text-lg " />
         </div>
@@ -23,14 +23,14 @@ const Address: FC = (): ReactElement => {
           <h3 className="p-0 text-lg font-bold">Call Us</h3>
           <p className="text-sm">+1 5589 55488 55</p>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-col md:flex-row gap-4 items-center mb-5">
         <div className="flex justify-center text-sky-400 hover:text-sky-50 items-center rounded-full p-2 bg-opacity-92 bg-sky-200 hover:bg-sky-400 transition duration-300 cursor-pointer">
           <TfiEmail className="text-lg" />
         </div>
         <div className="text-center md:text-left">
-          <h3 className="p-0 text-lg font-bold">Email Us</h3>
-          <p className="text-sm">info@example.com</p>
+          <h3 className="p-0 text-lg font-bold">Email me</h3>
+          <p className="text-sm">workostapuk@gmail.com</p>
         </div>
       </div>
       <div className="mt-10 w-full h-[250px]">

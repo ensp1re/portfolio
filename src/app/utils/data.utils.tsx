@@ -10,7 +10,11 @@ import {
   FaUser,
   FaUserGraduate,
 } from "react-icons/fa";
-import { IIconLink, INavComponent } from "../interfaces/main.interface";
+import {
+  ICardComponent,
+  IIconLink,
+  INavComponent,
+} from "@src/app/interfaces/main.interface";
 
 export const IconLinks: IIconLink[] = [
   {
@@ -66,10 +70,41 @@ export const navData: INavComponent[] = [
     Icon: FaListOl,
     isActive: false,
   },
+  // {
+  //   name: "Contact",
+  //   href: "contact",
+  //   Icon: FaPhone,
+  //   isActive: false,
+  // },
+];
+
+export const projectData: ICardComponent[] = [
   {
-    name: "Contact",
-    href: "contact",
-    Icon: FaPhone,
-    isActive: false,
+    title: "Gigmee - Freelance Marketplace",
+    href: "https://gigmee.live",
+    github: "https://github.com/ensp1re/gigmee",
+    image:
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663670/Screenshot_from_2024-10-11_19-18-00_xv6u7z.png",
   },
+  {
+    title: "MShop - E-Commerce Platform",
+    href: "http://matrickshop.vercel.app",
+    github: "https://github.com/ensp1re/m-shop",
+    image:
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728673751/Screenshot_from_2024-10-11_22-05-17_is2gnd.png",
+  },
+  {
+    title: "MChat - Chat Application",
+    href: "https://mchat.live",
+    github: "https://github.com/ensp1re/m-chat",
+    image:
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728675382/Screenshot_from_2024-10-11_22-35-50_wp3pb1.png",
+  },
+  // {
+  //   title: "MSocial - Social Media Platform",
+  //   href: "https://msocial.live",
+  //   github: "",
+  //   image:
+  //     "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663670/Screenshot_from_2024-10-11_19-18-00_xv6u7z.png",
+  // },
 ];

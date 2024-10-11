@@ -12,9 +12,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {
   SiDjango,
+  SiDocker,
   SiElasticsearch,
   SiExpress,
   SiFlask,
+  SiGit,
   SiKibana,
   SiMongodb,
   SiMysql,
@@ -57,14 +59,11 @@ const SkillsComponents: React.FC = (): ReactElement => {
     ...webSettings,
   };
 
-
   return (
     <div className="skills-carousel">
       <p className="mb-[3rem]">
-        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-        sit in iste officiis commodi quidem hic quas.
+        I have experience in both front-end and back-end development. Here are
+        some of the key skills I use:
       </p>
       <h3 className="text-2xl  p-5 font-bold mb-6 text-slate-900">
         My Web Developing Skills
@@ -171,6 +170,14 @@ const SkillsComponents: React.FC = (): ReactElement => {
         <div className="mr-3">
           <SiSelenium size={80} color="#43B02A" />
           <p className="relative left-2 mt-2">Selenium</p>
+        </div>
+        <div className="mr-3">
+          <SiDocker size={80} color="#2496ED" />
+          <p className="relative left-3.5 mt-2">Docker</p>
+        </div>
+        <div className="mr-3">
+          <SiGit size={80} color="#F05032" />
+          <p className="relative left-3.5 mt-2">Git</p>
         </div>
       </Slider>
       <h3 className="text-2xl p-5 font-bold mb-6 text-slate-900">Languages</h3>

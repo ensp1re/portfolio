@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { FC, ReactElement, useState } from "react";
-import { FaLink, FaSearchPlus, FaTimes } from "react-icons/fa";
+import { FaGithub, FaLink, FaSearchPlus, FaTimes } from "react-icons/fa";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { ICardComponent } from "@src/app/interfaces/main.interface";
 import Link from "next/link";
 
-const Card: FC<ICardComponent> = ({ title, href, image }): ReactElement => {
+const Card: FC<ICardComponent> = ({ title, href, image, github }): ReactElement => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const fullscreenHandle = useFullScreenHandle();
 
   return (
-    <li className="relative min-w-[300px] h-[270px] bg-white shadow-md rounded-md overflow-hidden group m-0 p-0 flex-grow">
+    <li className="relative w-[350px] h-[250px] bg-white shadow-md rounded-md overflow-hidden group m-0 p-0 flex-grow">
       <FullScreen
         className="w-full h-full"
         handle={fullscreenHandle}
@@ -18,14 +18,20 @@ const Card: FC<ICardComponent> = ({ title, href, image }): ReactElement => {
           setIsFullScreen(fullScreen);
         }}
       >
-        <div className="w-full h-full">
+        <div
+          className={`w-full h-full ${
+            isFullScreen ? "flex items-center justify-center" : ""
+          }`}
+        >
           <Image
             src={image}
             alt={title}
             width={1920}
             height={1080}
-            className={`object-cover w-full h-full rounded-md transform transition-transform duration-500 ease-in-out group-hover:scale-110 ${
-              isFullScreen ? "fullscreen-image" : ""
+            className={` object-cover rounded-md transform transition-transform duration-500 ease-in-out  ${
+              isFullScreen
+                ? "fullscreen-image"
+                : " w-full h-full group-hover:scale-110"
             }`}
           />
         </div>
@@ -45,6 +51,11 @@ const Card: FC<ICardComponent> = ({ title, href, image }): ReactElement => {
             {!isFullScreen && (
               <Link href={href ? href : "/"} target="_blank">
                 <FaLink className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
+              </Link>
+            )}
+             {!isFullScreen && (
+              <Link href={github ? github : "/"} target="_blank">
+                <FaGithub className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
               </Link>
             )}
           </div>

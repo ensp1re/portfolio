@@ -9,7 +9,7 @@ import NavComponent from "@src/app/pages/components/LeftSide/components/NavCompo
 const LeftSide: React.FC = (): React.ReactElement => {
   return (
     <header className="w-full px-[15px] flex h-screen flex-col items-center overflow-hidden">
-      <Avatar src="" size={120} alt="avatar" />
+      <Avatar src="https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg" size={120} alt="avatar" />
       <h1 className="text-2xl text-white mb-[0.67em] mx-0 font-bold isolate">
         Ostapuk Oleksandr
       </h1>

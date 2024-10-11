@@ -1,6 +1,8 @@
 import React, { FC, ReactElement } from "react";
 import { motion } from "framer-motion";
 import Card from "./Card";
+import { projectData } from "@src/app/utils/data.utils";
+import { v4 as uuidv4 } from "uuid";
 
 const Projects: FC = (): ReactElement => {
   return (
@@ -16,36 +18,18 @@ const Projects: FC = (): ReactElement => {
         Projects
       </h2>
       <ul className="flex flex-wrap w-full list-none m-0 p-0 gap-6 justify-between">
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
-        <Card
-          title="Lorem ipsum, dolor sit amet consectetur."
-          href="https://www.google.com"
-          image="https://res.cloudinary.com/dzivbyc4z/image/upload/v1716049020/samples/balloons.jpg"
-        />
+        {projectData &&
+          projectData.map((project, _index) => {
+            return (
+              <Card
+                key={uuidv4()}
+                github={project.github}
+                title={project.title}
+                image={project.image}
+                href={project.href}
+              />
+            );
+          })}
       </ul>
     </motion.section>
   );

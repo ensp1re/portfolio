@@ -51,4 +51,6 @@ export interface ICardComponent {
   title: string;
   href: string;
   image: string;
+  github: string;
 }
+

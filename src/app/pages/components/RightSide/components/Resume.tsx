@@ -15,10 +15,9 @@ const Resume: FC = (): ReactElement => {
         Resume
       </h2>
       <p>
-        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-        sit in iste officiis commodi quidem hic quas.
+        I am a full-stack developer skilled in both front-end and back-end
+        technologies. I enjoy creating functional and user-friendly web
+        applications. Below is a summary of my experience and education.
         <br />
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
@@ -34,20 +33,19 @@ const Resume: FC = (): ReactElement => {
 
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Brandon Johnson
+              Oleksandr Ostapuk
             </h4>
             <p className="mb-[16px]">
               <em>
-                Innovative and deadline-driven Graphic Designer with 3+ years of
-                experience designing and developing user-centered digital/print
-                marketing material from initial concept to final, polished
-                deliverable.
+                Full-stack developer with experience building responsive web
+                applications using modern frameworks and technologies. Focused
+                on creating seamless user experiences and scalable back-end
+                solutions.
               </em>
             </p>
             <ul className="list-disc pl-5">
-              <li>Portland par 127,Orlando, FL</li>
-              <li>(123) 456-7891</li>
-              <li>alice.barkley@example.com</li>
+              <li>Lutsk, Ukraine</li>
+              <li>workostapuk@gmail.com</li>
             </ul>
           </div>
 
@@ -60,42 +58,24 @@ const Resume: FC = (): ReactElement => {
           </h3>
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400 pb-8">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Master of Fine Arts &amp; Graphic Design
+              Bachelor of Science in &amp; Software Engineering
             </h4>
             <h5 className="font-semibold inline-block mb-[10px] px-[15px]">
-              2015 - 2016
+              2022 - Present
             </h5>
             <p className="mb-[1rem]">
               <em className="">
-                Rochester Institute of Technology, Rochester, NY
+                Lutsk National Technical University, Lutsk, Ukraine
               </em>
             </p>
             <p>
-              Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam
-              iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti
-              nerada porti sand markend
-            </p>
-          </div>
-
-          <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400">
-            <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Bachelor of Fine Arts &amp; Graphic Design
-            </h4>
-            <h5 className="font-semibold inline-block mb-[10px] px-[15px]">
-              2010 - 2014
-            </h5>
-            <p className="mb-[1rem]">
-              <em>Rochester Institute of Technology, Rochester, NY</em>
-            </p>
-            <p>
-              Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-              reiciendis et quis Eius vel ratione eius unde vitae rerum
-              voluptates asperiores voluptatem Earum molestiae consequatur neque
-              etlon sader mart dila
+              Learned core concepts in software development, including web
+              technologies, databases, and system architecture. Completed
+              projects that focused on full-stack application development.
             </p>
           </div>
         </div>
-        <div
+        {/* <div
           className="col-lg-6 aos-init aos-animate"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -166,7 +146,15 @@ const Resume: FC = (): ReactElement => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
+      </div>
+      <div className="w-full p-2 flex justify-center items-center">
+        <button
+          type="button"
+          className="rounded-lg border border-sky-300 bg-sky-400 text-white hover:bg-sky-300 transition duration-300 px-6 py-2"
+        >
+          Download CV
+        </button>
       </div>
     </motion.section>
   );
