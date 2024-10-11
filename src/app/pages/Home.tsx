@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { FC, ReactElement, useEffect, useRef, useState } from "react";
 import LeftSide from "@src/app/pages/components/LeftSide/LeftSide";
@@ -73,12 +73,16 @@ const Home: FC = (): ReactElement => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
     const handleLoad = () => {
       setLoading(false);
     };
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
-    window.addEventListener("load", handleLoad);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -96,7 +100,7 @@ const Home: FC = (): ReactElement => {
         <>
           <button
             id="menu"
-            className="flex justify-center items-center lg:hidden rounded-full p-1 fixed top-0 right-0 mr-3 mt-3 bg-sky-400 z-[1000]"
+            className="flex justify-center items-center lg:hidden rounded-full p-1 fixed top-0 right-0 mr-3 mt-3 hover:bg-sky-400 transition duration-300 cursor-pointer bg-sky-500 z-[1000]"
             onClick={() => {
               console.log("Button clicked, isOpen:", isOpen);
               setIsOpen(!isOpen);

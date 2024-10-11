@@ -4,6 +4,7 @@ import {
   FaHome,
   FaInstagram,
   FaLinkedin,
+  FaListOl,
   FaPhone,
   FaTelegram,
   FaUser,
@@ -57,6 +58,12 @@ export const navData: INavComponent[] = [
     name: "Skills",
     href: "skills",
     Icon: FaUserGraduate,
+    isActive: false,
+  },
+  {
+    name: "Projects",
+    href: "projects",
+    Icon: FaListOl,
     isActive: false,
   },
   {

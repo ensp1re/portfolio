@@ -86,3 +86,45 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
+@media (min-width: 992px) {
+  .addr-box {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-box {
+    flex: 0 0 auto;
+    width: 55.33333333%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1274px) {
+  .addr-box {
+    width: 100%;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 887px) {
+  .addr-box {
+    width: 100%;
+  }
+
+  .form-box {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 888px) and (max-width: 991px) {
+  .form-box {
+    min-width: 40%;
+  }
+  
+}

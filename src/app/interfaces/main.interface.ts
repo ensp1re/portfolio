@@ -29,3 +29,26 @@ export interface IInfoItem {
   label: string;
   value: string;
 }
+
+export interface ICoordinates {
+  lat: number;
+  lng: number;
+}
+
+export interface GeocodeResponse {
+  results: {
+    geometry: {
+      location: ICoordinates;
+    };
+  }[];
+}
+
+export interface IMapComponentProps {
+  address: string;
+}
+
+export interface ICardComponent {
+  title: string;
+  href: string;
+  image: string;
+}
