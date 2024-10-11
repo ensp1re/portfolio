@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useEffect, useState } from "react";
+import React, { FC, ReactElement, useState } from "react";
 
 const ContactForm: FC = (): ReactElement => {
   const [firstName, setFirstName] = useState<string>("");
