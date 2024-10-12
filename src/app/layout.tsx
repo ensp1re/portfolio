@@ -9,10 +9,6 @@ export const metadata: Metadata = {
   icons: "icon.png",
   description:
     "Ostapuk's Portfolio Website - Fullstack Developer. Explore my projects, skills, and experience in web development.",
-  other: {
-    name: "freelancehunt",
-    content: "04a600f4ed399fa",
-  },
 };
 
 export default function RootLayout({
@@ -22,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="freelancehunt" content="04a600f4ed399fa" />
+      </head>
       <body className={`${roboto.className} bg-slate-50`}>{children}</body>
     </html>
   );
