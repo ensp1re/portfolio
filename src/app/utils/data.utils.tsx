@@ -90,7 +90,7 @@ export const projectData: ICardComponent[] = [
     href: "http://matrickshop.vercel.app",
     github: "https://github.com/ensp1re/m-shop",
     image:
-      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728673751/Screenshot_from_2024-10-11_22-05-17_is2gnd.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728745996/Screenshot_from_2024-10-12_18-05-46_pbwujo.png",
   },
   {
     title: "MChat - Chat Application",
