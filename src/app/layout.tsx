@@ -6,9 +6,13 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
   title: "Portfolio | Ostapuk",
-  icons: 'icon.png',
-  description: "Ostapuk's Portfolio Website - Fullstack Developer. Explore my projects, skills, and experience in web development.",
-  
+  icons: "icon.png",
+  description:
+    "Ostapuk's Portfolio Website - Fullstack Developer. Explore my projects, skills, and experience in web development.",
+  other: {
+    name: "freelancehunt",
+    content: "04a600f4ed399fa",
+  },
 };
 
 export default function RootLayout({
