@@ -15,10 +15,6 @@ const ContactForm: FC = (): ReactElement => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
-      console.log("URL", URL);
-      console.log("process.env.NEXT_CLIENT_URL", process.env.NEXT_CLIENT_URL);
-      console.log("process.env.NEXT_PUBLIC_CLIENT_URL", "/api/message");
-
       e.preventDefault();
       setIsLoading(true);
       toast
