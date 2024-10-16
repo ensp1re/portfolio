@@ -50,7 +50,14 @@ export interface IMapComponentProps {
 export interface ICardComponent {
   title: string;
   href: string;
-  image: string;
+  images: string[];
   github: string;
 }
 
+
+export interface IEmailDocument {
+  firstName:  string;
+  lastName:  string;
+  email:  string;
+  message:  string;
+}

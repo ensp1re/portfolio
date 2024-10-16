@@ -26,7 +26,7 @@ const Projects: FC = (): ReactElement => {
                 key={uuidv4()}
                 github={project.github}
                 title={project.title}
-                image={project.image}
+                images={project.images}
                 href={project.href}
               />
             );

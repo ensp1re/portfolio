@@ -1,13 +1,68 @@
 import React, { FC, ReactElement, useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { FaSpinner } from "react-icons/fa";
+
+const URL = "http://localhost:3000/api/message";
 
 const ContactForm: FC = (): ReactElement => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    try {
+      e.preventDefault();
+      setIsLoading(true);
+      toast
+        .promise(
+          axios.post(
+            URL,
+            {
+              firstName,
+              lastName,
+              email,
+              message,
+            },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          ),
+          {
+            loading: "Sending message...",
+            success: "Message sent successfully",
+            error: error || "Failed to send message",
+          }
+        )
+        .then((res) => {
+          if (res.status === 200) {
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setMessage("");
+          }
+        })
+        .catch((error) => {
+          setError(error.message);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } catch (error) {
+      console.error("Error in contact form submit", error);
+    }
+  };
 
   return (
-    <form className="not-italic w-full form-box bg-slate-50 shadow-lg p-10">
+    <form
+      onSubmit={handleSubmit}
+      className="not-italic w-full form-box bg-slate-50 shadow-lg p-10"
+    >
       <div className="grid md:grid-cols-2 md:gap-6">
         <div className="relative z-0 w-full mb-5 group">
           <input
@@ -97,9 +152,15 @@ const ContactForm: FC = (): ReactElement => {
       <div className="flex justify-center">
         <button
           type="submit"
-          className="text-white bg-sky-500 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:bg-sky-700 focus:ring-sky-800 duration-300"
+          className={`text-white bg-sky-500 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:bg-sky-700  duration-300
+          ${isLoading ? "cursor-not-allowed" : "cursor-pointer"}
+            `}
         >
-          Submit
+          {isLoading ? (
+            <FaSpinner className="animate-spin inline-block" />
+          ) : (
+            "Submit"
+          )}
         </button>
       </div>
     </form>
