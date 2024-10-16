@@ -5,10 +5,6 @@ import { FaSpinner } from "react-icons/fa";
 
 const URL = `/api/message`;
 
-
-
-
-
 const ContactForm: FC = (): ReactElement => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
@@ -22,8 +18,7 @@ const ContactForm: FC = (): ReactElement => {
       console.log("URL", URL);
       console.log("process.env.NEXT_CLIENT_URL", process.env.NEXT_CLIENT_URL);
       console.log("process.env.NEXT_PUBLIC_CLIENT_URL", "/api/message");
-    
-    
+
       e.preventDefault();
       setIsLoading(true);
       toast
@@ -160,6 +155,7 @@ const ContactForm: FC = (): ReactElement => {
       </div>
       <div className="flex justify-center">
         <button
+          disabled={isLoading}
           type="submit"
           className={`text-white bg-sky-500 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:bg-sky-700  duration-300
           ${isLoading ? "cursor-not-allowed" : "cursor-pointer"}
