@@ -3,7 +3,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 
-const URL = "http://localhost:3000/api/message";
+const URL = `${process.env.NEXT_CLIENT_URL}/api/message`;
 
 const ContactForm: FC = (): ReactElement => {
   const [firstName, setFirstName] = useState<string>("");
