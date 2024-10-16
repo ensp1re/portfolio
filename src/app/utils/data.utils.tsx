@@ -85,8 +85,8 @@ export const projectData: ICardComponent[] = [
     github: "https://github.com/ensp1re/gigmee",
     images: [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663670/Screenshot_from_2024-10-11_19-18-00_xv6u7z.png",
-      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105149/4_kd33ur.png",
-      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105149/4_kd33ur.png",
+      https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105152/1_fvgymd.png
+            "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105149/4_kd33ur.png",
     ],
   },
   {
