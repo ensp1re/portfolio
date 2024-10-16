@@ -1,9 +1,13 @@
-import React, { FC, ReactElement, useState } from "react";
+import React, { FC, ReactElement, useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
 
-const URL = `${process.env.NEXT_CLIENT_URL}/api/message`;
+const URL = `/api/message`;
+
+
+
+
 
 const ContactForm: FC = (): ReactElement => {
   const [firstName, setFirstName] = useState<string>("");
@@ -15,6 +19,11 @@ const ContactForm: FC = (): ReactElement => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
+      console.log("URL", URL);
+      console.log("process.env.NEXT_CLIENT_URL", process.env.NEXT_CLIENT_URL);
+      console.log("process.env.NEXT_PUBLIC_CLIENT_URL", "/api/message");
+    
+    
       e.preventDefault();
       setIsLoading(true);
       toast
