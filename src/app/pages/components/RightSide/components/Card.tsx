@@ -79,10 +79,8 @@ const Card: FC<ICardComponent> = ({
     }
   };
 
-  
-
   return (
-    <li className="relative w-[350px] h-[250px] bg-white shadow-md rounded-md overflow-hidden group m-0 p-0 flex-grow">
+    <li className="relative bg-white shadow-md rounded-md overflow-hidden group m-0 p-0">
       <FullScreen
         className="w-full h-full"
         handle={fullscreenHandle}
@@ -100,7 +98,7 @@ const Card: FC<ICardComponent> = ({
             alt={title}
             width={1920}
             height={1080}
-            className={` object-cover rounded-md transform transition-transform duration-500 ease-in-out ${
+            className={`object-cover w-auto h-full rounded-md transform transition-transform duration-500 ease-in-out ${
               isFullScreen
                 ? "fullscreen-image"
                 : "w-full h-full group-hover:scale-110"
@@ -109,41 +107,42 @@ const Card: FC<ICardComponent> = ({
         </div>
 
         <div
-          className={`absolute inset-0 flex flex-col items-center justify-center space-y-4 text-slate-50 text-lg font-bold opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 bg-black bg-opacity-30
-            ${isFullScreen ? "" : ""}
-          `}
+          className={`absolute inset-0 flex flex-col items-center justify-center space-y-4 text-slate-50 text-lg font-bold opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 bg-black bg-opacity-30 ${
+            isFullScreen ? "" : ""
+          }`}
         >
           {isFullScreen && images.length > 0 && (
-            <FaArrowLeft
-              className="absolute left-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
-              onClick={previousImage}
-            />
+            <>
+              <FaArrowLeft
+                className="absolute left-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
+                onClick={previousImage}
+              />
+              <FaArrowRight
+                className="absolute right-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
+                onClick={nextImage}
+              />
+            </>
           )}
-          {isFullScreen && images.length > 0 && (
-            <FaArrowRight
-              className="absolute right-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
-              onClick={nextImage}
-            />
-          )}
+
           <div className="flex space-x-4">
             {!isFullScreen && (
-              <FaSearchPlus
-                className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300"
-                onClick={() => fullscreenHandle.enter()}
-              />
-            )}
-            {!isFullScreen && (
-              <Link href={href || "/"} target="_blank">
-                <FaLink className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
-              </Link>
-            )}
-            {!isFullScreen && (
-              <Link href={github || "/"} target="_blank">
-                <FaGithub className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
-              </Link>
+              <>
+                <FaSearchPlus
+                  className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300"
+                  onClick={() => fullscreenHandle.enter()}
+                />
+                <Link href={href || "/"} target="_blank">
+                  <FaLink className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
+                </Link>
+                <Link href={github || "/"} target="_blank">
+                  <FaGithub className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
+                </Link>
+              </>
             )}
           </div>
+
           <p className="absolute bottom-0 p-5 text-slate-50">{title}</p>
+
           {isFullScreen && (
             <FaTimes
               className="absolute top-0 right-4 text-2xl cursor-pointer text-gray-300 hover:text-gray-100 transition duration-300"
