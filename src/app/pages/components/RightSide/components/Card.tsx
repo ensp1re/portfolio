@@ -80,6 +80,7 @@ const Card: FC<ICardComponent> = ({
   };
 
   return (
+    // no width and height
     <li className="relative bg-white shadow-md rounded-md overflow-hidden group m-0 p-0">
       <FullScreen
         className="w-full h-full"
@@ -97,10 +98,10 @@ const Card: FC<ICardComponent> = ({
             src={images[currentImageIndex]}
             alt={title}
             width={1920}
-            height={1080}
-            className={`object-cover w-auto h-full rounded-md transform transition-transform duration-500 ease-in-out ${
+            height={1280}
+            className={`object-contain rounded-md transform transition-transform duration-500 ease-in-out ${
               isFullScreen
-                ? "fullscreen-image"
+                ? "fullscreen-image w-auto h-full"
                 : "w-full h-full group-hover:scale-110"
             }`}
           />
@@ -113,24 +114,33 @@ const Card: FC<ICardComponent> = ({
         >
           {isFullScreen && images.length > 0 && (
             <>
-              <FaArrowLeft
-                className="absolute left-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
+              <button
+                type="button"
+                className="absolute left-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300 focus:outline-none"
                 onClick={previousImage}
-              />
-              <FaArrowRight
-                className="absolute right-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300"
+              >
+                <FaArrowLeft />
+              </button>
+              <button
+                type="button"
+                className="absolute right-4 text-3xl cursor-pointer text-gray-400 hover:text-gray-200 transition duration-300 focus:outline-none"
                 onClick={nextImage}
-              />
+              >
+                <FaArrowRight />
+              </button>
             </>
           )}
 
           <div className="flex space-x-4">
             {!isFullScreen && (
               <>
-                <FaSearchPlus
-                  className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300"
+                <button
+                  type="button"
+                  className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300 focus:outline-none"
                   onClick={() => fullscreenHandle.enter()}
-                />
+                >
+                  <FaSearchPlus />
+                </button>
                 <Link href={href || "/"} target="_blank">
                   <FaLink className="text-2xl cursor-pointer hover:text-sky-400 transition duration-300" />
                 </Link>
@@ -143,15 +153,18 @@ const Card: FC<ICardComponent> = ({
 
           <p className="absolute bottom-0 p-5 text-slate-50">{title}</p>
 
-          {isFullScreen && (
-            <FaTimes
-              className="absolute top-0 right-4 text-2xl cursor-pointer text-gray-300 hover:text-gray-100 transition duration-300"
+            {isFullScreen && (
+            <button
+              type="button"
+              className="absolute top-0 right-4 text-2xl cursor-pointer text-gray-300 hover:text-gray-100 transition duration-300 focus:outline-none"
               onClick={() => {
-                fullscreenHandle.exit();
-                setCurrentImageIndex(0);
+              fullscreenHandle.exit();
+              setCurrentImageIndex(0);
               }}
-            />
-          )}
+            >
+              <FaTimes />
+            </button>
+            )}
         </div>
       </FullScreen>
     </li>

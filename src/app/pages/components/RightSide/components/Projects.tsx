@@ -18,6 +18,7 @@ const Projects: FC = (): ReactElement => {
       <h2 className="section-title text-2xl md:text-3xl lg:text-4xl font-bold relative text-[#050d18]">
         Projects
       </h2>
+      {/* repeat() important  */}
       <ul className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(420px,1fr))] w-full list-none m-0 p-0 gap-6 justify-center md:justify-start">
         {projectData &&
           projectData.map((project: ICardComponent) => {
