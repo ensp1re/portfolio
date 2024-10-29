@@ -106,6 +106,16 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728675382/Screenshot_from_2024-10-11_22-35-50_wp3pb1.png",
     ],
   },
+  {
+    title: "Temptify - Ai-Powered Image Editor",
+    href: "https://temptify.vercel.app",
+    github: "https://github.com/ensp1re/temptify",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-54-57_ul8fxw.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-55-24_jumwsr.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-55-40_hhakxl.png",
+    ],
+  },
   // {
   //   title: "MSocial - Social Media Platform",
   //   href: "https://msocial.live",
