@@ -1,6 +1,5 @@
 import React, { FC, ReactElement } from "react";
 import { TfiEmail, TfiLocationPin } from "react-icons/tfi";
-import GoogleMaps from "./GoogleMaps";
 
 const Address: FC = (): ReactElement => {
   return (
