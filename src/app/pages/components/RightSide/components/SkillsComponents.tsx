@@ -7,194 +7,147 @@ import {
   FaNodeJs,
   FaPython,
 } from "react-icons/fa";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import {
-  SiDjango,
-  SiDocker,
-  SiElasticsearch,
+  SiTypescript,
+  SiNextdotjs,
+  SiVite,
+  SiTailwindcss,
   SiExpress,
-  SiFlask,
-  SiGit,
-  SiKibana,
+  SiSocketdotio,
   SiMongodb,
   SiMysql,
-  SiNextdotjs,
   SiPostgresql,
   SiPrisma,
+  SiElasticsearch,
   SiRabbitmq,
+  SiKibana,
   SiRedis,
   SiRedux,
+  SiFlask,
+  SiDjango,
   SiSelenium,
-  SiSocketdotio,
-  SiTailwindcss,
-  SiTypescript,
-  SiVite,
+  SiDocker,
+  SiGit,
+  SiNestjs,
+  SiSass,
 } from "react-icons/si";
-import Flag from "react-world-flags";
 
+import Flag from "react-world-flags"
+
+/**
+ * SkillsComponents is a React functional component that displays a categorized list of skills.
+ * 
+ * The component is divided into several sections:
+ * - Web Development Skills: Displays skills related to front-end and back-end web development.
+ * - Database Skills: Displays skills related to various database technologies.
+ * - Other Skills: Displays additional skills including tools and programming languages.
+ * - Languages: Displays language proficiency.
+ * 
+ * Each skill is represented by a `SkillItem` component which includes an icon, label, and color.
+ * 
+ * @returns {ReactElement} A JSX element containing the categorized list of skills.
+ */
 const SkillsComponents: React.FC = (): ReactElement => {
-  const webSettings = {
-    dots: false,
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    pauseOnHover: false,
-    arrows: false,
-    draggable: false,
-    swipe: false,
-  };
-
-  const databaseSettings = {
-    ...webSettings,
-    rtl: true,
-  };
-
-  const otherSettings = {
-    ...webSettings,
-  };
-
   return (
-    <div className="skills-carousel">
-      <p className="mb-[3rem]">
-        I have experience in both front-end and back-end development. Here are
+    <div className="shadow-lg bg-slate-100 p-4 sm:p-6 lg:p-8">
+      <p className="mb-8 text-lg sm:text-base text-gray-700">
+        I have experience in both front-end and back-end development. Below are
         some of the key skills I use:
       </p>
-      <h3 className="text-2xl  p-5 font-bold mb-6 text-slate-900">
-        My Web Developing Skills
+
+      <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mb-4">
+        My Web Development Skills
       </h3>
-      <Slider className="font-semibold" {...webSettings}>
-        <div>
-          <FaHtml5 size={80} color="#E34F26" />
-          <span className="relative left-3.5 mt-2">HTML5</span>
-        </div>
-        <div>
-          <FaCss3Alt size={80} color="#1572B6" />
-          <p className="relative left-5 mt-2">CSS3</p>
-        </div>
-        <div>
-          <FaJs size={80} color="#F7DF1E" />
-          <p className="relative left-2 mt-2">JavaScript</p>
-        </div>
-        <div>
-          <SiTypescript size={80} color="#3178C6" />
-          <p className="relative left-1 mt-2">TypeScript</p>
-        </div>
-        <div>
-          <FaReact size={80} color="#61DAFB" />
-          <p className="relative left-3.5 mt-2">React</p>
-        </div>
-        <div>
-          <SiNextdotjs size={80} color="#000000" />
-          <p className="relative left-4 mt-2">Next.js</p>
-        </div>
-        <div>
-          <SiVite size={80} color="#646CFF" />
-          <p className="relative left-4 mt-2">Vite.js</p>
-        </div>
-        <div>
-          <SiTailwindcss size={80} color="#38B2AC" />
-          <p className="relative mt-2">Tailwind CSS</p>
-        </div>
-        <div>
-          <FaNodeJs size={80} color="#339933" />
-          <p className="relative left-2 mt-2">Node.js</p>
-        </div>
-        <div>
-          <SiExpress size={80} color="#000000" />
-          <p className="relative left-2 mt-2">Express.js</p>
-        </div>
-        <div>
-          <SiSocketdotio size={80} color="#010101" />
-          <p className="relative left-2.5 mt-2">Socket.IO</p>
-        </div>
-      </Slider>
-      <h3 className="text-2xl p-5 font-bold mb-6 text-slate-900">Database</h3>
-      <Slider className="font-semibold" {...databaseSettings}>
-        <div>
-          <SiMongodb size={80} color="#47A248" />
-          <p className="relative left-1 mt-2">MongoDB</p>
-        </div>
-        <div>
-          <SiMysql size={80} color="#4479A1" />
-          <p className="relative left-3.5 mt-2">MySQL</p>
-        </div>
-        <div>
-          <SiPostgresql size={80} color="#4169E1" />
-          <p className="mt-2">PostgreSQL</p>
-        </div>
-        <div>
-          <SiPrisma size={80} color="#0C344B" />
-          <p className="relative left-3.5 mt-2">Prisma</p>
-        </div>
-      </Slider>
-      <h3 className="text-2xl p-5 font-bold mb-6 text-slate-900">Other</h3>
-      <Slider className="font-semibold" {...otherSettings}>
-        <div className="mr-3">
-          <SiElasticsearch size={80} color="#005571" />
-          <p className="relative mt-2">Elasticsearch</p>
-        </div>
-        <div className="mr-3">
-          <SiRabbitmq size={80} color="#FF6600" />
-          <p className="relative left-1 mt-2">RabbitMQ</p>
-        </div>
-        <div className="mr-3">
-          <SiKibana size={80} color="#005571" />
-          <p className="relative left-3.5 mt-2">Kibana</p>
-        </div>
-        <div>
-          <SiRedis size={80} color="#DC382D" />
-          <p className="relative left-3.5 mt-2">Redis</p>
-        </div>
-        <div className="mr-3">
-          <SiRedux size={80} color="#764ABC" />
-          <p className="relative left-3.5 mt-2">Redux</p>
-        </div>
-        <div className="mr-3">
-          <FaPython size={80} color="#3776AB" />
-          <p className="relative left-3.5 mt-2">Python</p>
-        </div>
-        <div className="mr-3">
-          <SiFlask size={80} color="#000000" />
-          <p className="relative left-3.5 mt-2">Flask</p>
-        </div>
-        <div className="mr-3">
-          <SiDjango size={80} color="#092E20" />
-          <p className="relative left-5 mt-2">Django</p>
-        </div>
-        <div className="mr-3">
-          <SiSelenium size={80} color="#43B02A" />
-          <p className="relative left-2 mt-2">Selenium</p>
-        </div>
-        <div className="mr-3">
-          <SiDocker size={80} color="#2496ED" />
-          <p className="relative left-3.5 mt-2">Docker</p>
-        </div>
-        <div className="mr-3">
-          <SiGit size={80} color="#F05032" />
-          <p className="relative left-3.5 mt-2">Git</p>
-        </div>
-      </Slider>
-      <h3 className="text-2xl p-5 font-bold mb-6 text-slate-900">Languages</h3>
-      <div className="font-semibold gap-5 w-full flex flex-row ">
-        <div className="flex flex-col justify-center items-center">
-          <Flag code="gb" className="h-12" />
-          <p className="mt-2">English</p>
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <Flag code="ua" className="h-12 w-20" />
-          <p className="mt-2">Ukrainian</p>
-        </div>
-        <div className="flex flex-col justify-center items-center">
-          <Flag code="es" className="h-12" />
-          <p className="mt-2">Spanish</p>
-        </div>
+      {/* Web Development Skills */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <SkillItem icon={<FaHtml5 />} label="HTML5" color="#E34F26" />
+        <SkillItem icon={<FaCss3Alt />} label="CSS3" color="#1572B6" />
+        <SkillItem icon={<FaJs />} label="JavaScript" color="#F7DF1E" />
+        <SkillItem icon={<SiTypescript />} label="TypeScript" color="#3178C6" />
+        <SkillItem icon={<FaReact />} label="React" color="#61DAFB" />
+        <SkillItem icon={<SiNextdotjs />} label="Next.js" color="#000000" />
+        <SkillItem icon={<SiVite />} label="Vite.js" color="#646CFF" />
+        <SkillItem
+          icon={<SiTailwindcss />}
+          label="Tailwind CSS"
+          color="#38B2AC"
+        />
+        <SkillItem icon={<FaNodeJs />} label="Node.js" color="#339933" />
+        <SkillItem icon={<SiExpress />} label="Express.js" color="#000000" />
+        <SkillItem icon={<SiNestjs />} label="NestJs" color="#E0234E" />
+        <SkillItem icon={<SiSass />} label="Sass" color="#CC6699" />
+        <SkillItem icon={<SiSocketdotio />} label="Socket.IO" color="#010101" />
       </div>
+
+      <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
+        Database Skills
+      </h3>
+      {/* Database Skills */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <SkillItem icon={<SiMongodb />} label="MongoDB" color="#47A248" />
+        <SkillItem icon={<SiMysql />} label="MySQL" color="#4479A1" />
+        <SkillItem icon={<SiPostgresql />} label="PostgreSQL" color="#4169E1" />
+        <SkillItem icon={<SiPrisma />} label="Prisma" color="#0C344B" />
+      </div>
+
+      <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
+        Other Skills
+      </h3>
+      {/* Other Skills */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <SkillItem
+          icon={<SiElasticsearch />}
+          label="Elasticsearch"
+          color="#005571"
+        />
+        <SkillItem icon={<SiRabbitmq />} label="RabbitMQ" color="#FF6600" />
+        <SkillItem icon={<SiKibana />} label="Kibana" color="#005571" />
+        <SkillItem icon={<SiRedis />} label="Redis" color="#DC382D" />
+        <SkillItem icon={<SiRedux />} label="Redux" color="#764ABC" />
+        <SkillItem icon={<FaPython />} label="Python" color="#3776AB" />
+        <SkillItem icon={<SiFlask />} label="Flask (Basic)" color="#000000" />
+        <SkillItem icon={<SiDjango />} label="Django (Basic)" color="#092E20" />
+        <SkillItem icon={<SiSelenium />} label="Selenium" color="#43B02A" />
+        <SkillItem icon={<SiDocker />} label="Docker" color="#2496ED" />
+        <SkillItem icon={<SiGit />} label="Git" color="#F05032" />
+      </div>
+      {/* Languages Section */}
+      <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
+        Languages
+      </h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <SkillItem icon={<Flag code="gb" />} label="English (Conversational)" color="#1D4ED8" />
+        <SkillItem icon={<Flag code="ua" />} label="Ukrainian (Native)" color="#FFC107" />
+        <SkillItem icon={<Flag code="es" />} label="Spanish (Basic)" color="#FF5722" />
+      </div>
+    </div>
+  );
+};
+
+const SkillItem = ({
+  icon,
+  label,
+  color,
+}: {
+  icon?: React.ReactNode;
+  label: string;
+  color: string;
+}) => {
+  return (
+    <div className="flex cursor-pointer flex-col items-center justify-center p-3 sm:p-4 bg-white rounded-lg shadow hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+      <div
+      className={`w-12 h-12 flex items-center justify-center ${React.isValidElement(icon) && icon.type === Flag ? '' : 'rounded-full'}`}
+      style={{ backgroundColor: React.isValidElement(icon) && icon.type === Flag ? 'transparent' : color }}
+      >
+      {icon &&
+        React.cloneElement(icon as React.ReactElement, {
+        size: 30,
+        color: React.isValidElement(icon) && icon.type === Flag ? undefined : "white",
+        })}
+      </div>
+      <p className="mt-2 text-sm sm:text-base text-gray-800 font-medium text-center">
+      {label}
+      </p>
     </div>
   );
 };

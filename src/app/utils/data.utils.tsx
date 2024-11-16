@@ -116,6 +116,16 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-55-40_hhakxl.png",
     ],
   },
+  {
+    title: "Portfolio - Company Website",
+    href: "https://gigmee.me/portfolio-lab",
+    github: "https://github.com/ensp1re/portfolio-lab",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1731781155/Screenshot_from_2024-11-16_20-17-56_z6zgrp.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1731781155/Screenshot_from_2024-11-16_20-18-11_feluz6.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1731781155/Screenshot_from_2024-11-16_20-18-03_gqu5lk.png",
+    ],
+  },
   // {
   //   title: "MSocial - Social Media Platform",
   //   href: "https://msocial.live",
