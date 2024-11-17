@@ -199,6 +199,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Ostapuk Oleksandr" }],
   robots: "index, follow",
   icons: "favicon.ico",
+
   openGraph: {
     type: "website",
     url: "https://ostapuk.tech",
@@ -210,7 +211,13 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg",
         width: 1200,
         height: 630,
-        alt: "Ostapuk Oleksandr - Остапук Олександр Portfolio",
+        alt: "Зображення профілю Остапука Олександра",
+      },
+      {
+        url: "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Professional profile image of Ostapuk Oleksandr",
       },
     ],
   },

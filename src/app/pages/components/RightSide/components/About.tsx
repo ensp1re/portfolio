@@ -40,6 +40,24 @@ const About: FC = (): ReactElement => {
       </p>
       <div className="flex w-full h-full flex-col lg:flex-row gap-[25px]">
         <div className="w-[325px] h-[325px] pr-5 relative aspect-square">
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: `
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ImageObject",
+                  "contentUrl": "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg",
+                  "creator": {
+                    "@type": "Person",
+                    "name": "Ostapuk Oleksandr"
+                  },
+                  "description": "A professional profile image of Ostapuk Oleksandr",
+                  "license": "https://creativecommons.org/licenses/by/4.0/"
+                }
+              `,
+            }}
+          />
           <Image
             alt="Profile image"
             width="1920"
