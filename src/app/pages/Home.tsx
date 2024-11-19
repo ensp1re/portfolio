@@ -53,7 +53,7 @@ const Home: FC = (): ReactElement => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen, isLgScreen]);
+  }, [isOpen, isLgScreen, setIsOpen]);
 
   const handleScroll = () => {
     const sections: string[] = navData.reduce<string[]>((acc, item) => {
@@ -88,7 +88,7 @@ const Home: FC = (): ReactElement => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("load", handleLoad);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <>

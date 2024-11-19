@@ -3,6 +3,7 @@ import Link from "next/link";
 import { navData } from "@src/app/utils/data.utils";
 import { INavComponent } from "@src/app/interfaces/main.interface";
 import { useStateContext } from "@src/app/context/StateContext";
+import { useTranslations } from "next-intl";
 
 const NavComponent = () => {
   const { activeSection, setActiveSection, setIsOpen } = useStateContext();
@@ -15,11 +16,20 @@ const NavComponent = () => {
     }
   };
 
+  const t = useTranslations("nav");
+
+  const updatedNavData = navData.map((item: INavComponent) => {
+    return {
+      ...item,
+      name: t(item.name.toLowerCase()),
+    };
+  });
+
   return (
     <nav className="flex items-center whitespace-nowrap transition duration-300 w-full text-nav-color font-poppins text-[16px] font-normal">
       <ul className="list-none">
-        {navData &&
-          navData.map((item: INavComponent) => (
+        {updatedNavData &&
+          updatedNavData.map((item: INavComponent) => (
             <li className="p-0 m-0 isolate" key={item.href}>
               <Link
                 href="#"

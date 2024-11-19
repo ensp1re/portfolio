@@ -3,6 +3,7 @@ import { FC, ReactElement } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { Raleway } from "next/font/google";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const raleway = Raleway({
   weight: ["400", "700"],
@@ -10,6 +11,16 @@ const raleway = Raleway({
 });
 
 const Main: FC = (): ReactElement => {
+  const t = useTranslations("personalInfo");
+
+  const jobTitles: string[] = [
+    t("job.title1"),
+    t("job.title2"),
+    t("job.title3"),
+    t("job.title4"),
+    t("job.title5"),
+  ];
+
   return (
     <section
       id="home"
@@ -34,14 +45,14 @@ const Main: FC = (): ReactElement => {
         <h1
           className={`font-bold text-[30px] sm:text-[36px] lg:text-[46px] ${raleway.className}`}
         >
-          Ostapuk <br className="lg:hidden" />
-          Oleksandr
+          {t("name").split(" ")[0]} <br className="lg:hidden" />
+          {t("name").split(" ")[1]}
         </h1>
         <p className="flex gap-2 text-white text-[18px] sm:text-[22px] lg:text-[26px] flex-row">
-          I&apos;m{" "}
+          {t("who")}{" "}
           <TypeAnimation
             cursor={true}
-            sequence={["a Developer", "a FullStack", "a Freelancer"]}
+            sequence={jobTitles}
             repeat={Infinity}
             speed={5}
             wrapper="span"

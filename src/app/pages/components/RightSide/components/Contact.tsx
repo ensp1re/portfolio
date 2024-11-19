@@ -2,8 +2,12 @@ import { FC, ReactElement } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "@src/app/pages/components/RightSide/components/ContactForm";
 import Address from "./Address";
+import { useTranslations } from "next-intl";
 
 const Contact: FC = (): ReactElement => {
+
+  const t = useTranslations("contact");
+
   return (
     <motion.section
       id="contact"
@@ -14,7 +18,7 @@ const Contact: FC = (): ReactElement => {
       viewport={{ once: true }}
     >
       <h2 className="section-title text-2xl md:text-3xl mb-10 lg:text-4xl font-bold relative text-[#050d18]">
-        Contact
+        {t("title")}
       </h2>
       <div className="flex flex-wrap gap-6">
         <Address />

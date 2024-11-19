@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React, { ReactElement } from "react";
 import {
   FaHtml5,
@@ -48,15 +49,16 @@ import Flag from "react-world-flags"
  * @returns {ReactElement} A JSX element containing the categorized list of skills.
  */
 const SkillsComponents: React.FC = (): ReactElement => {
+  const t = useTranslations("skills");
+
   return (
     <div className="shadow-lg bg-slate-100 p-4 sm:p-6 lg:p-8">
       <p className="mb-8 text-lg sm:text-base text-gray-700">
-        I have experience in both front-end and back-end development. Below are
-        some of the key skills I use:
+        {t("webDevelopment")}
       </p>
 
       <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mb-4">
-        My Web Development Skills
+        {t("webDevelopmentSkills")}
       </h3>
       {/* Web Development Skills */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -80,7 +82,7 @@ const SkillsComponents: React.FC = (): ReactElement => {
       </div>
 
       <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
-        Database Skills
+        {t("databaseSkills")}
       </h3>
       {/* Database Skills */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -91,7 +93,7 @@ const SkillsComponents: React.FC = (): ReactElement => {
       </div>
 
       <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
-        Other Skills
+        {t("otherSkills")}
       </h3>
       {/* Other Skills */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -113,7 +115,7 @@ const SkillsComponents: React.FC = (): ReactElement => {
       </div>
       {/* Languages Section */}
       <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">
-        Languages
+        {t("languages")}
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         <SkillItem icon={<Flag code="gb" />} label="English (Conversational)" color="#1D4ED8" />

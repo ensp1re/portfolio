@@ -1,7 +1,11 @@
 import { FC, ReactElement } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Resume: FC = (): ReactElement => {
+  const t1 = useTranslations("resume");
+  const t2 = useTranslations("contact");
+
   return (
     <motion.section
       initial={{ opacity: 0.3, y: 100 }}
@@ -12,12 +16,10 @@ const Resume: FC = (): ReactElement => {
       className="lg:ml-0 container-custom relative flex flex-col w-full min-h-screen gap-8 py-[80px] px-5 md:px-10 lg:px-20 bg-sky-50 text-slate-900"
     >
       <h2 className="section-title text-[32px] font-bold relative text-[#050d18]">
-        Resume
+        {t1("title")}
       </h2>
       <p>
-        I am a full-stack developer skilled in both front-end and back-end
-        technologies. I enjoy creating functional and user-friendly web
-        applications. Below is a summary of my experience and education.
+        {t1("objective")}
         <br />
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
@@ -28,23 +30,20 @@ const Resume: FC = (): ReactElement => {
             text-[26px] font-bold relative my-[20px] text-[#050d18]
           "
           >
-            Sumary
+            {t1("summary")}
           </h3>
 
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Oleksandr Ostapuk
+              {t1("name")}
             </h4>
             <p className="mb-[16px]">
               <em>
-                Full-stack developer with experience building responsive web
-                applications using modern frameworks and technologies. Focused
-                on creating seamless user experiences and scalable back-end
-                solutions.
+                {t1("experience")}
               </em>
             </p>
             <ul className="list-disc pl-5">
-              <li>Lutsk, Ukraine</li>
+              <li>{t2("addressDetails")}</li>
               <li>workostapuk@gmail.com</li>
             </ul>
           </div>
@@ -54,24 +53,22 @@ const Resume: FC = (): ReactElement => {
             text-[26px] font-bold relative my-[20px] text-[#050d18]
           "
           >
-            Education
+            {t1("educationName")}
           </h3>
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400 pb-8">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Bachelor of Science in &amp; Software Engineering
+              {t1("education.degree")}
             </h4>
             <h5 className="font-semibold inline-block mb-[10px] px-[15px]">
-              2022 - Present
+              {t1("education.years")}
             </h5>
             <p className="mb-[1rem]">
               <em className="">
-                Lutsk National Technical University, Lutsk, Ukraine
+                {t1("education.institution")}
               </em>
             </p>
             <p>
-              Learned core concepts in software development, including web
-              technologies, databases, and system architecture. Completed
-              projects that focused on full-stack application development.
+              {t1("education.details")}
             </p>
           </div>
         </div>
@@ -154,7 +151,7 @@ const Resume: FC = (): ReactElement => {
             type="button"
             className="rounded-lg border border-sky-300 bg-sky-400 text-white hover:bg-sky-300 transition duration-300 px-6 py-2"
           >
-            Download CV
+            {t1("download")}
           </button>
         </a>
       </div>

@@ -5,28 +5,40 @@ import SocialCircles from "@src/app/pages/components/LeftSide/components/SocialC
 import { v4 as uuidv4 } from "uuid";
 import { IIconLink } from "@src/app/interfaces/main.interface";
 import NavComponent from "@src/app/pages/components/LeftSide/components/NavComponent";
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "../LocaleSwitcher";
 
 const LeftSide: React.FC = (): React.ReactElement => {
+  const t = useTranslations("personalInfo");
+
   return (
-    <header className="w-full px-[15px] flex h-screen flex-col items-center overflow-hidden">
-      <Avatar src="https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg" size={120} alt="avatar" />
-      <h1 className="text-2xl text-white mb-[0.67em] mx-0 font-bold isolate">
-        Ostapuk Oleksandr
-      </h1>
-      <div className="flex gap-3 mb-5">
-        {IconLinks &&
-          IconLinks.map((item: IIconLink) => {
-            return (
-              <SocialCircles
-                key={uuidv4()}
-                Icon={item.Icon}
-                href={item.href}
-                isBlank={true}
-              />
-            );
-          })}
+    <header className="w-full px-[15px] flex h-screen flex-col justify-between overflow-hidden">
+      <div className="flex w-full flex-col items-center">
+        <Avatar
+          src="https://res.cloudinary.com/dzivbyc4z/image/upload/v1728663650/avatar_wfztoa.jpg"
+          size={120}
+          alt="avatar"
+        />
+        <h1 className="text-2xl text-white mb-[0.67em] mx-0 font-bold isolate">
+          {t("name")}
+        </h1>
+        <div className="flex gap-3 mb-5">
+          {IconLinks &&
+            IconLinks.map((item: IIconLink) => {
+              return (
+                <SocialCircles
+                  key={uuidv4()}
+                  Icon={item.Icon}
+                  href={item.href}
+                  isBlank={true}
+                />
+              );
+            })}
+        </div>
+        <NavComponent />
       </div>
-      <NavComponent />
+
+      <LocaleSwitcher />
     </header>
   );
 };

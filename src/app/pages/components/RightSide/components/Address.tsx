@@ -1,7 +1,12 @@
+import { useTranslations } from "next-intl";
 import React, { FC, ReactElement } from "react";
 import { TfiEmail, TfiLocationPin } from "react-icons/tfi";
 
 const Address: FC = (): ReactElement => {
+
+
+  const t = useTranslations("contact");
+
   return (
     <address className="not-italic addr-box bg-slate-50 shadow-lg p-10">
       <div className="flex flex-col md:flex-row gap-4 items-center mb-5">
@@ -9,8 +14,8 @@ const Address: FC = (): ReactElement => {
           <TfiLocationPin className="text-lg" />
         </div>
         <div className="text-center md:text-left">
-          <h3 className="p-0 text-lg font-bold">Address</h3>
-          <p className="text-sm">Lutsk, Ukraine</p>
+          <h3 className="p-0 text-lg font-bold">{t("address")}</h3>
+          <p className="text-sm">{t("addressDetails")}</p>
         </div>
       </div>
       {/* <div className="flex flex-col md:flex-row gap-4 items-center mb-5">
@@ -27,7 +32,7 @@ const Address: FC = (): ReactElement => {
           <TfiEmail className="text-lg" />
         </div>
         <div className="text-center md:text-left">
-          <h3 className="p-0 text-lg font-bold">Email me</h3>
+          <h3 className="p-0 text-lg font-bold">{t("emailMe")}</h3>
           <p className="text-sm">workostapuk@gmail.com</p>
         </div>
       </div>

@@ -33,6 +33,16 @@ const Card: FC<ICardComponent> = ({
     setCurrentImageIndex(0);
   };
 
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
   const handleKeyNavigation = useCallback(
     (event: KeyboardEvent) => {
       if (isFullScreen) {
@@ -43,18 +53,8 @@ const Card: FC<ICardComponent> = ({
         }
       }
     },
-    [isFullScreen, currentImageIndex]
+    [isFullScreen, nextImage, previousImage]
   );
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const previousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
 
   useEffect(() => {
     if (isFullScreen) {
@@ -153,18 +153,18 @@ const Card: FC<ICardComponent> = ({
 
           <p className="absolute bottom-0 p-5 text-slate-50">{title}</p>
 
-            {isFullScreen && (
+          {isFullScreen && (
             <button
               type="button"
               className="absolute top-0 right-4 text-2xl cursor-pointer text-gray-300 hover:text-gray-100 transition duration-300 focus:outline-none"
               onClick={() => {
-              fullscreenHandle.exit();
-              setCurrentImageIndex(0);
+                fullscreenHandle.exit();
+                setCurrentImageIndex(0);
               }}
             >
               <FaTimes />
             </button>
-            )}
+          )}
         </div>
       </FullScreen>
     </li>

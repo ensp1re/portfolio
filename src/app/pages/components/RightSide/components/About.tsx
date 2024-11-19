@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FC, ReactElement } from "react";
 import InfoItem from "@src/app/pages/components/RightSide/components/InfoItem";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const About: FC = (): ReactElement => {
   const calculateAge = (birthDate: string): string => {
@@ -18,6 +19,9 @@ const About: FC = (): ReactElement => {
     return `${age}`;
   };
 
+  const t1 = useTranslations("about");
+  const t2 = useTranslations("personalInfo");
+
   return (
     <motion.section
       id="about"
@@ -28,15 +32,10 @@ const About: FC = (): ReactElement => {
       viewport={{ once: true }}
     >
       <h2 className="section-title text-[32px] font-bold relative text-[#050d18]">
-        About
+        {t1("title")}
       </h2>
       <p className="p-0 m-0">
-        I am a full-stack developer who enjoys building websites and
-        applications. I focus on both the front-end and back-end, which means I
-        can create the part users see and the server-side logic that powers the
-        application. I like solving problems and working with others to create
-        useful software. I am always looking to learn new skills and improve my
-        work.
+        {t1("description")}.
       </p>
       <div className="flex w-full h-full flex-col lg:flex-row gap-[25px]">
         <div className="w-[325px] h-[325px] pr-5 relative aspect-square">
@@ -71,25 +70,21 @@ const About: FC = (): ReactElement => {
         </div>
         <div className="w-full h-full flex flex-col gap-5">
           <h2 className="font-bold text-[26px] text-[#050d18]">
-            Full-Stack Developer
+            {t2("job.title1")}
           </h2>
           <p>
-            I create websites and applications that are easy to use and work
-            well on different devices.
+            {t1("fullStackDeveloper")}
           </p>
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-1">
-            <InfoItem label="Birthday" value="4 April 2005" />
-            <InfoItem label="Website" value="www.ostapuk.tech" />
-            <InfoItem label="Phone" value="+38 098 565 79 77" />
-            <InfoItem label="City" value="Lutsk, Ukraine" />
-            <InfoItem label="Age" value={calculateAge("2005-04-04")} />
-            <InfoItem label="Degree" value="Bachelor" />
+            <InfoItem label={t1("birthday")} value="4 April 2005" />
+            <InfoItem label={t1("website")} value="www.ostapuk.tech" />
+            <InfoItem label={t1("phone")} value="+38 098 565 79 77" />
+            <InfoItem label={t1("city")} value="Lutsk, Ukraine" />
+            <InfoItem label={"age"} value={calculateAge("2005-04-04")} />
+            <InfoItem label={t1("degree")} value="Bachelor" />
           </ul>
           <p>
-            I enjoy learning about the latest technologies in web development.
-            My goal is to make software that meets users needs and is easy to
-            understand. I believe good communication and teamwork are important
-            for success in any project.
+            {t1("goal")}
           </p>
         </div>
       </div>

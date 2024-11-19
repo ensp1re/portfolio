@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@src/app/globals.scss";
 import { Roboto } from "next/font/google";
+import { getLocale, getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -226,14 +228,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
-      <body className={`${roboto.className} bg-slate-50`}>{children}</body>
+    <html lang={`${locale}`}>
+      <NextIntlClientProvider messages={messages}>
+        <body className={`${roboto.className} bg-slate-50`}>{children}</body>
+      </NextIntlClientProvider>
     </html>
   );
 }

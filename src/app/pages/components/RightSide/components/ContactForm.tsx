@@ -2,6 +2,7 @@ import React, { FC, ReactElement, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { FaSpinner } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const URL = `/api/message`;
 
@@ -12,6 +13,9 @@ const ContactForm: FC = (): ReactElement => {
   const [message, setMessage] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+
+  const t = useTranslations();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
@@ -160,7 +164,7 @@ const ContactForm: FC = (): ReactElement => {
           {isLoading ? (
             <FaSpinner className="animate-spin inline-block" />
           ) : (
-            "Submit"
+            t("button")
           )}
         </button>
       </div>
