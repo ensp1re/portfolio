@@ -53,14 +53,16 @@
     "languages": "Languages"
   },
   "projects": {
+    "title": "Projects",
     "projectsTitle": "Projects",
     "gigmee": "Gigmee - Freelance Marketplace",
     "mshop": "MShop - E-Commerce Platform",
-    "Mchat": "MChat - Real-Time Chat Application",
+    "mchat": "MChat - Real-Time Chat Application",
     "temptify": "Temptify - Ai-Powered Image Editor",
     "portfolio": "Portfolio - Company Website"
   },
   "contact": {
+    "title": "Contact",
     "contactTitle": "Contact",
     "address": "Address",
     "addressDetails": "Lutsk, Ukraine",
