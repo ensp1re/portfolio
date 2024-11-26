@@ -19,7 +19,7 @@ const LeftSide: React.FC = (): React.ReactElement => {
           size={120}
           alt="avatar"
         />
-        <h1 className="text-2xl text-white mb-[0.67em] mx-0 font-bold isolate">
+        <h1 className="text-xl text-white mb-[0.67em] mx-0 font-bold isolate">
           {t("name")}
         </h1>
         <div className="flex gap-3 mb-5">
