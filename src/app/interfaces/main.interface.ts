@@ -52,6 +52,7 @@ export interface ICardComponent {
   href: string;
   images: string[];
   github: string;
+  category?: string;
 }
 
 

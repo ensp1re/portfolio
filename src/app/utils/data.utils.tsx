@@ -39,8 +39,6 @@ export const IconLinks: IIconLink[] = [
   },
 ];
 
-
-
 export const navData: INavComponent[] = [
   {
     name: "Home",
@@ -90,6 +88,7 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105152/1_fvgymd.png",
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105149/4_kd33ur.png",
     ],
+    category: "other",
   },
   {
     title: "MShop - E-Commerce Platform",
@@ -99,6 +98,7 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728745996/Screenshot_from_2024-10-12_18-05-46_pbwujo.png",
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105151/13_qwcka3.png",
     ],
+    category: "other",
   },
   {
     title: "MChat - Chat Application",
@@ -107,6 +107,7 @@ export const projectData: ICardComponent[] = [
     images: [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728675382/Screenshot_from_2024-10-11_22-35-50_wp3pb1.png",
     ],
+    category: "ecommerce",
   },
   {
     title: "Temptify - Ai-Powered Image Editor",
@@ -117,6 +118,7 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-55-24_jumwsr.png",
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1730210192/Screenshot_from_2024-10-29_15-55-40_hhakxl.png",
     ],
+    category: "saas",
   },
   {
     title: "Portfolio - Company Website",
@@ -127,7 +129,47 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1731781155/Screenshot_from_2024-11-16_20-18-11_feluz6.png",
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1731781155/Screenshot_from_2024-11-16_20-18-03_gqu5lk.png",
     ],
+    category: "landing",
   },
+  {
+    title: "Goodlyfe - Training Platform",
+    href: "https://goodlyfe.vercel.app",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1733906984/goodlyfe_dx3cao.png",
+    ],
+    github: "https://github.com/ensp1re/Goodlyfe",
+    category: "landing",
+  },
+
+  {
+    title: "Acreative - Creative Agency",
+    href: "https://acreative.vercel.app",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1733906983/acreative_w0fdvs.png",
+    ],
+    github: "https://github.com/ensp1re/Agency-Creative",
+    category: "landing",
+  },
+  {
+    title: "Green Bank - Banking Platform",
+    href: "https://green-bank-phi.vercel.app/",
+    github: "https://github.com/ensp1re/Green-Bank",
+    images: [
+      " https://res.cloudinary.com/dzivbyc4z/image/upload/v1733906983/greenbank_p9q46b.png",
+    ],
+    category: "landing",
+  },
+
+  {
+    title: "Personal Portfolio - Portfolio Website",
+    href: "https://personal-portfolio-coral-three.vercel.app/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1733909893/Screenshot_from_2024-12-11_11-36-49_h1wtqi.png",
+    ],
+    github: "https://github.com/ensp1re/Personal-Portfolio",
+    category: "landing",
+  },
+
   // {
   //   title: "MSocial - Social Media Platform",
   //   href: "https://msocial.live",

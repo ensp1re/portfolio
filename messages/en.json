@@ -59,7 +59,11 @@
     "mshop": "MShop - E-Commerce Platform",
     "mchat": "MChat - Real-Time Chat Application",
     "temptify": "Temptify - Ai-Powered Image Editor",
-    "portfolio": "Portfolio - Company Website"
+    "portfolio": "Portfolio - Company Website",
+    "goodlyfe": "Goodlyfe - Training Platform",
+    "acreative": "ACreative - Design Agency Website",
+    "green": "Green Bank - Financial Services Website",
+    "personal": "Personal Portfolio - Personal Website"
   },
   "contact": {
     "title": "Contact",

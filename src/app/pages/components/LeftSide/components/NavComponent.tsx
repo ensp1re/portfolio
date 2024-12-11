@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 
 const NavComponent = () => {
   const { activeSection, setActiveSection, setIsOpen } = useStateContext();
+  
 
   const handleLinkClick = (sectionId: string) => {
     setActiveSection(sectionId);
