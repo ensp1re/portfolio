@@ -63,7 +63,14 @@
     "goodlyfe": "Goodlyfe - Training Platform",
     "acreative": "ACreative - Design Agency Website",
     "green": "Green Bank - Financial Services Website",
-    "personal": "Personal Portfolio - Personal Website"
+    "personal": "Personal Portfolio - Personal Website",
+    "button": "Submit",
+    "allProjects": "All Projects",
+    "landingPages": "Landing Pages",
+    "ecommerce": "E-Commerce",
+    "other": "Other",
+    "manager": "Manager - Tasks Management Application"
+
   },
   "contact": {
     "title": "Contact",
@@ -71,9 +78,10 @@
     "address": "Address",
     "addressDetails": "Lutsk, Ukraine",
     "emailMe": "Email me",
-    "emailDetails": "workostapuk@gmail.com"
+    "emailDetails": "workostapuk@gmail.com",
+    "button": "Submit"
   },
-  "footer": " All rights reserved",
+  "footer": "All rights reserved",
   "nav": {
     "home": "Home",
     "about": "About",
@@ -81,6 +89,5 @@
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
-  },
-  "button": "Submit"
+  }
 }

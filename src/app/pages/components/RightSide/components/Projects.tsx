@@ -15,13 +15,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@src/components/ui/pagination";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@src/components/ui/select";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -79,28 +72,44 @@ const Projects: FC = (): ReactElement => {
       </h2>
 
       <div className="flex justify-between items-center mb-6">
-        <Select onValueChange={handleFilterChange} defaultValue="all">
-          <SelectTrigger className="w-[200px] bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-            <SelectValue placeholder="Filter by category" />
-          </SelectTrigger>
-          <SelectContent className="bg-white border border-gray-300 rounded-md shadow-lg">
-            <SelectItem value="all" className="px-4 py-2 hover:bg-gray-100">
-              All Projects
-            </SelectItem>
-            <SelectItem value="landing" className="px-4 py-2 hover:bg-gray-100">
-              Landing Pages
-            </SelectItem>
-            <SelectItem
-              value="ecommerce"
-              className="px-4 py-2 hover:bg-gray-100"
-            >
-              E-commerce
-            </SelectItem>
-            <SelectItem value="other" className="px-4 py-2 hover:bg-gray-100">
-              Other
-            </SelectItem>
-          </SelectContent>
-        </Select>
+        <div className="flex flex-wrap gap-4 w-full items-center justify-center mx-auto max-w-md">
+          <button
+            onClick={() => handleFilterChange("all")}
+            className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "all"
+              ? "bg-sky-400 text-white"
+              : "bg-white border border-gray-300 hover:bg-gray-100"
+              }`}
+          >
+            {t("allProjects")}
+          </button>
+          <button
+            onClick={() => handleFilterChange("landing")}
+            className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "landing"
+              ? "bg-sky-400 text-white"
+              : "bg-white border border-gray-300 hover:bg-gray-100"
+              }`}
+          >
+            {t("landingPages")}
+          </button>
+          <button
+            onClick={() => handleFilterChange("ecommerce")}
+            className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "ecommerce"
+              ? "bg-sky-400 text-white"
+              : "bg-white border border-gray-300 hover:bg-gray-100"
+              }`}
+          >
+            {t("ecommerce")}
+          </button>
+          <button
+            onClick={() => handleFilterChange("other")}
+            className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "other"
+              ? "bg-sky-400 text-white"
+              : "bg-white border border-gray-300 hover:bg-gray-100"
+              }`}
+          >
+            {t("other")}
+          </button>
+        </div>
       </div>
 
       {filteredProjects.length === 0 ? (
@@ -125,11 +134,10 @@ const Projects: FC = (): ReactElement => {
             <PaginationItem>
               <PaginationPrevious
                 onClick={(e) => handleClick(e, Math.max(1, currentPage - 1))}
-                className={`px-3 py-1 rounded-md cursor-pointer hover:text-white ${
-                  currentPage === 1
-                    ? "pointer-events-none opacity-50 bg-gray-200"
-                    : "bg-sky-400 text-white hover:bg-sky-500"
-                }`}
+                className={`px-3 py-1 rounded-md cursor-pointer hover:text-white ${currentPage === 1
+                  ? "pointer-events-none opacity-50 bg-gray-200"
+                  : "bg-sky-400 text-white hover:bg-sky-500"
+                  }`}
               >
                 Previous
               </PaginationPrevious>
@@ -138,11 +146,10 @@ const Projects: FC = (): ReactElement => {
               <PaginationItem key={i}>
                 <PaginationLink
                   onClick={(e) => handleClick(e, i + 1)}
-                  className={`px-3 py-1 rounded-md cursor-pointer ${
-                    currentPage === i + 1
-                      ? "bg-sky-400 text-white"
-                      : "bg-white border border-gray-300 hover:bg-gray-100"
-                  }`}
+                  className={`px-3 py-1 rounded-md cursor-pointer ${currentPage === i + 1
+                    ? "bg-sky-400 text-white"
+                    : "bg-white border border-gray-300 hover:bg-gray-100"
+                    }`}
                 >
                   {i + 1}
                 </PaginationLink>
@@ -153,11 +160,10 @@ const Projects: FC = (): ReactElement => {
                 onClick={(e) =>
                   handleClick(e, Math.min(totalPages, currentPage + 1))
                 }
-                className={`px-3 py-1 rounded-md cursor-pointer text-white ${
-                  currentPage === totalPages
-                    ? "pointer-events-none opacity-50 bg-gray-200 text-black"
-                    : "bg-sky-400 hover:text-white hover:bg-sky-500"
-                }`}
+                className={`px-3 py-1 rounded-md cursor-pointer text-white ${currentPage === totalPages
+                  ? "pointer-events-none opacity-50 bg-gray-200 text-black"
+                  : "bg-sky-400 hover:text-white hover:bg-sky-500"
+                  }`}
               >
                 Next
               </PaginationNext>

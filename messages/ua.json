@@ -61,14 +61,20 @@
     "goodlyfe": "Goodlyfe - Платформа для тренувань",
     "acreative": "ACreative - Веб-сайт дизайн-агенції",
     "green": "Green Bank - Веб-сайт фінансових послуг",
-    "personal": "Портфоліо - Персональний веб-сайт"
+    "personal": "Портфоліо - Персональний веб-сайт",
+    "allProjects": "Всі проекти",
+    "landingPages": "Лендінг",
+    "ecommerce": "Інтернет-Магазини",
+    "other": "Інше",
+    "manager": "Менеджер - Система управління тасків"
   },
   "contact": {
     "title": "Контакти",
     "address": "Адреса",
     "addressDetails": "Луцьк, Україна",
     "emailMe": "Напишіть мені",
-    "emailDetails": "workostapuk@gmail.com"
+    "emailDetails": "workostapuk@gmail.com",
+    "button": "Надіслати"
   },
   "footer": "Всі права захищені",
   "nav": {

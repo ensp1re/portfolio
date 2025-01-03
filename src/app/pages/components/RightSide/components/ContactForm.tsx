@@ -15,7 +15,7 @@ const ContactForm: FC = (): ReactElement => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
 
-  const t = useTranslations();
+  const t = useTranslations("contact");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {

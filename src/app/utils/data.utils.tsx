@@ -98,7 +98,7 @@ export const projectData: ICardComponent[] = [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728745996/Screenshot_from_2024-10-12_18-05-46_pbwujo.png",
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1729105151/13_qwcka3.png",
     ],
-    category: "other",
+    category: "ecommerce",
   },
   {
     title: "MChat - Chat Application",
@@ -107,7 +107,7 @@ export const projectData: ICardComponent[] = [
     images: [
       "https://res.cloudinary.com/dzivbyc4z/image/upload/v1728675382/Screenshot_from_2024-10-11_22-35-50_wp3pb1.png",
     ],
-    category: "ecommerce",
+    category: "other",
   },
   {
     title: "Temptify - Ai-Powered Image Editor",
@@ -155,7 +155,7 @@ export const projectData: ICardComponent[] = [
     href: "https://green-bank-phi.vercel.app/",
     github: "https://github.com/ensp1re/Green-Bank",
     images: [
-      " https://res.cloudinary.com/dzivbyc4z/image/upload/v1733906983/greenbank_p9q46b.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1733906983/greenbank_p9q46b.png",
     ],
     category: "landing",
   },
@@ -169,6 +169,16 @@ export const projectData: ICardComponent[] = [
     github: "https://github.com/ensp1re/Personal-Portfolio",
     category: "landing",
   },
+  {
+    title: "Manager - Task Manager",
+    href: "https://cryptotimes.vercel.app/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1735934120/a1_aruo72.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1735934120/a2_ymw1h9.png",
+    ],
+    github: "https://github.com/ensp1re/CryptoManager",
+    category: "other",
+  }
 
   // {
   //   title: "MSocial - Social Media Platform",
