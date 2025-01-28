@@ -1,0 +1,94 @@
+{
+  "personalInfo": {
+    "name": "Ostapuk Oleksandr",
+    "birthday": "4 April 2005",
+    "website": "www.ostapuk.tech",
+    "phone": "+38 098 565 79 77",
+    "city": "Lutsk, Ukraine",
+    "age": 19,
+    "degree": "Bachelor",
+    "email": "workostapuk@gmail.com",
+    "location": "Lutsk, Ukraine",
+    "who": "I'm",
+    "job": {
+      "title1": "Full-Stack Developer",
+      "title2": "Frontend Developer",
+      "title3": "Backend Developer",
+      "title4": "Freelancer",
+      "title5": "Web Developer"
+    }
+  },
+  "about": {
+    "birthday": "Birthday",
+    "website": "Website",
+    "phone": "Phone",
+    "age": "Age",
+    "city": "City",
+    "degree": "Degree",
+    "title": "About me",
+    "description": "I am a full-stack developer who enjoys building websites and applications. I focus on both the front-end and back-end, which means I can create the part users see and the server-side logic that powers the application. I like solving problems and working with others to create useful software. I am always looking to learn new skills and improve my work.",
+    "fullStackDeveloper": "I create websites and applications that are easy to use and work well on different devices.",
+    "goal": "I enjoy learning about the latest technologies in web development. My goal is to make software that meets users needs and is easy to understand. I believe good communication and teamwork are important for success in any project."
+  },
+  "resume": {
+    "title": "Resume",
+    "name": "Ostapuk Oleksandr",
+    "educationName": "Education",
+    "summary": "Summary",
+    "objective": "I am a full-stack developer with expertise in both front-end and back-end technologies. I enjoy creating functional and user-friendly web applications. Below is a brief overview of my experience and education.",
+    "experience": "Full-stack developer with experience building responsive web applications using modern frameworks and technologies. Focused on creating seamless user experiences and scalable back-end solutions.",
+    "education": {
+      "degree": "Bachelor of Science in Software Engineering",
+      "years": "2022 - Present",
+      "institution": "Lutsk National Technical University, Lutsk, Ukraine",
+      "details": "Learned core concepts in software development, including web technologies, databases, and system architecture. Completed projects that focused on full-stack application development."
+    },
+    "download": "Download CV"
+  },
+  "skills": {
+    "title": "Skills",
+    "webDevelopment": "I have experience in both front-end and back-end development. Below are some of the key skills I use:",
+    "webDevelopmentSkills": "Web development skills",
+    "databaseSkills": "Database skills",
+    "otherSkills": "Other skills",
+    "languages": "Languages"
+  },
+  "projects": {
+    "title": "Projects",
+    "projectsTitle": "Projects",
+    "gigmee": "Gigmee - Freelance Marketplace",
+    "mshop": "MShop - E-Commerce Platform",
+    "mchat": "MChat - Real-Time Chat Application",
+    "temptify": "Temptify - Ai-Powered Image Editor",
+    "portfolio": "Portfolio - Company Website",
+    "goodlyfe": "Goodlyfe - Training Platform",
+    "acreative": "ACreative - Design Agency Website",
+    "green": "Green Bank - Financial Services Website",
+    "personal": "Personal Portfolio - Personal Website",
+    "button": "Submit",
+    "allProjects": "All Projects",
+    "landingPages": "Landing Pages",
+    "ecommerce": "E-Commerce",
+    "other": "Other",
+    "manager": "Manager - Tasks Management Application"
+
+  },
+  "contact": {
+    "title": "Contact",
+    "contactTitle": "Contact",
+    "address": "Address",
+    "addressDetails": "Lutsk, Ukraine",
+    "emailMe": "Email me",
+    "emailDetails": "workostapuk@gmail.com",
+    "button": "Submit"
+  },
+  "footer": "All rights reserved",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
