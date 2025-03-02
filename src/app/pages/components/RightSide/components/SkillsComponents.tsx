@@ -31,6 +31,7 @@ import {
   SiGit,
   SiNestjs,
   SiSass,
+  SiSolidity,
 } from "react-icons/si";
 
 import Flag from "react-world-flags"
@@ -112,6 +113,7 @@ const SkillsComponents: React.FC = (): ReactElement => {
         <SkillItem icon={<SiSelenium />} label="Selenium" color="#43B02A" />
         <SkillItem icon={<SiDocker />} label="Docker" color="#2496ED" />
         <SkillItem icon={<SiGit />} label="Git" color="#F05032" />
+        <SkillItem icon={<SiSolidity />} label="Solidity" color="#3776AB" />
       </div>
       {/* Languages Section */}
       <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mt-8 mb-4">

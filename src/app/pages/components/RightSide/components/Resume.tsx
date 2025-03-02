@@ -72,7 +72,7 @@ const Resume: FC = (): ReactElement => {
             </p>
           </div>
         </div>
-        {/* <div
+        <div
           className="col-lg-6 aos-init aos-animate"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -82,68 +82,68 @@ const Resume: FC = (): ReactElement => {
             text-[26px] font-bold relative my-[20px] text-[#050d18]
           "
           >
-            Professional Experience
+            Projects
           </h3>
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400 pb-7">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Senior graphic design specialist
+              BeAura
             </h4>
             <h5 className="font-semibold inline-block mb-[10px] px-[15px]">
-              2019 - Present
+              2024 December - Present
             </h5>
             <p className="mb-[1rem]">
-              <em>Experion, New York, NY </em>
+              <em>BeAura - An AI-powered SaaS project that helps people find their perfect haircut.</em>
             </p>
             <ul className="list-disc pl-5">
               <li>
-                Lead in the design, development, and implementation of the
-                graphic, layout, and production communication materials
+                Led the design, development, and implementation of the
+                graphic, layout, and production communication materials.
               </li>
               <li>
-                Delegate tasks to the 7 members of the design team and provide
-                counsel on all aspects of the project.{" "}
+                Completed all tasks independently, ensuring high quality and timely delivery.
               </li>
               <li>
-                Supervise the assessment of all graphic materials in order to
-                ensure quality and accuracy of the design
+                Supervised the assessment of all graphic materials to
+                ensure quality and accuracy of the design.
               </li>
               <li>
-                Oversee the efficient use of production project budgets ranging
-                from $2,000 - $25,000
+                Managed the entire project lifecycle from frontend to backend to DevOps.
+              </li>
+              <li>
+                Utilized technologies such as Next.js, React.js, Redux, NestJS, JWT, MongoDB, TypeORM, and AWS.
               </li>
             </ul>
           </div>
 
           <div className="custom-resume relative px-[20px] border-l-2 border-l-sky-400">
             <h4 className="font-raleway text-[18px] uppercase font-semibold relative bottom-1">
-              Graphic design specialist
+              GIGMEE
             </h4>
             <h5 className="font-semibold inline-block mb-[10px] px-[15px]">
-              2017 - 2018
+              2024 JUNE - 2024 November
             </h5>
             <p className="mb-[1rem]">
-              <em>Stepping Stone Advertising, New York, NY</em>
+              <em>Gigmee - A freelance platform that helps business owners find workers.</em>
             </p>
             <ul className="list-disc pl-5">
               <li>
-                Developed numerous marketing programs (logos,
-                brochures,infographics, presentations, and advertisements).
+                Managed up to 5 projects or tasks at a given time while under pressure.
               </li>
               <li>
-                Managed up to 5 projects or tasks at a given time while under
-                pressure
+                Recommended and consulted with clients on the most appropriate graphic design.
               </li>
               <li>
-                Recommended and consulted with clients on the most appropriate
-                graphic design
+                Created 4+ design presentations and proposals a month for clients and account managers.
               </li>
               <li>
-                Created 4+ design presentations and proposals a month for
-                clients and account managers
+                Led the development from frontend to backend to DevOps.
+              </li>
+              <li>
+                Utilized technologies such as Vite, React, Redux, RTK Query, Microservices, NodeJs, ExpressJs, AWS, Elasticsearch, Kibana, Redis, MongoDB, Postgres, MySQL, SocketIO, RabbitMQ, Kubernetes, and Jenkins.
               </li>
             </ul>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="w-full p-2 flex justify-center items-center">
         <a href={"resume.pdf"} download>

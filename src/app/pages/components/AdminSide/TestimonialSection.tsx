@@ -111,9 +111,9 @@ export default function TestimonialsSection() {
                                         className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
                                     >
                                         {testimonial.imageUrl && (
-                                            <div className="h-48 overflow-hidden">
+                                            <div className="h-auto overflow-hidden">
                                                 <Image
-                                                    src={testimonial.imageUrl || "/placeholder.svg?height=200&width=400"}
+                                                    src={testimonial.imageUrl || "https://res.cloudinary.com/dzivbyc4z/image/upload/v1740947500/placeholderimage_ldzvxu.png"}
                                                     alt={`Project for ${testimonial.name}`}
                                                     width={400}
                                                     height={200}
