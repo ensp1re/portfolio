@@ -10,6 +10,7 @@ const nextConfig = {
       "avatars.githubusercontent.com",
       "res.cloudinary.com",
       "via.placeholder.com",
+      "i.pravatar.cc",
     ],
   },
 

@@ -9,6 +9,7 @@ const Contact = lazy(() => import("@src/app/pages/components/RightSide/component
 const TopButton = lazy(() => import("@src/app/pages/components/RightSide/components/TopButton"));
 const Projects = lazy(() => import("@src/app/pages/components/RightSide/components/Projects"));
 const Footer = lazy(() => import("@src/app/pages/components/RightSide/components/Footer"));
+const TestimonialSection = lazy(() => import("@src/app/pages/components/AdminSide/TestimonialSection"));
 
 const RightSide: FC = (): ReactElement => {
   const [activeTopBtn, setActiveTopBtn] = useState<boolean>(false);
@@ -36,6 +37,7 @@ const RightSide: FC = (): ReactElement => {
         <Resume />
         <Skills />
         <Projects />
+        <TestimonialSection />
         <Contact />
         <Footer />
       </Suspense>

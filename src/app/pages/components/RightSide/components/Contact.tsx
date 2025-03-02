@@ -11,7 +11,7 @@ const Contact: FC = (): ReactElement => {
   return (
     <motion.section
       id="contact"
-      className="container-custom relative flex w-full min-h-screen flex-col py-20 px-5 md:px-10 lg:px-20 gap-8 bg-slate-50 text-slate-900 border-t-1"
+      className="container-custom relative flex w-full min-h-screen flex-col py-20 px-5 md:px-10 lg:px-20 gap-8 bg-sky-50 text-slate-900 border-t-1"
       initial={{ opacity: 0.3, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

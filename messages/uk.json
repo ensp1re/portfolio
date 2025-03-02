@@ -84,7 +84,11 @@
     "resume": "Резюме",
     "skills": "Навички",
     "projects": "Проекти",
-    "contact": "Контакти"
+    "contact": "Контакти",
+    "reviews": "Відгуки"
   },
-  "button": "Надіслати"
+  "button": "Надіслати",
+  "reviews": {
+    "title": "Відгуки"
+  }
 }

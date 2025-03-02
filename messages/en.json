@@ -71,7 +71,6 @@
     "ecommerce": "E-Commerce",
     "other": "Other",
     "manager": "Manager - Tasks Management Application"
-
   },
   "contact": {
     "title": "Contact",
@@ -89,6 +88,10 @@
     "resume": "Resume",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "reviews": "Reviews"
+  },
+  "reviews": {
+    "title": "Reviews"
   }
 }
