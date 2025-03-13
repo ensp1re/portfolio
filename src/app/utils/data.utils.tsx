@@ -185,6 +185,17 @@ export const projectData: ICardComponent[] = [
     ],
     github: "https://github.com/ensp1re/CryptoManager",
     category: "other",
+  },
+  {
+    title: "BeAura - AI-Powered haircut changer",
+    href: "/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1741905740/ai_dc2kfi.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1741905739/ai3_zvufrq.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1741905740/ai2_cxqjf1.png",
+    ],
+    github: "https://github.com/ensp1re/beaura-client",
+    category: "saas",
   }
 
   // {

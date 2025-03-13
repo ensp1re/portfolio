@@ -32,6 +32,7 @@
   },
   "resume": {
     "title": "Resume",
+    "projects": "Projects",
     "name": "Ostapuk Oleksandr",
     "educationName": "Education",
     "summary": "Summary",
@@ -43,7 +44,33 @@
       "institution": "Lutsk National Technical University, Lutsk, Ukraine",
       "details": "Learned core concepts in software development, including web technologies, databases, and system architecture. Completed projects that focused on full-stack application development."
     },
-    "download": "Download CV"
+    "download": "Download CV",
+    "experience2": [
+      {
+        "title": "BeAura",
+        "duration": "2024 December - Present",
+        "description": "BeAura - An AI-powered SaaS project that helps people find their perfect haircut.",
+        "responsibilities": [
+          "Led the design, development, and implementation of the graphic, layout, and production communication materials.",
+          "Completed all tasks independently, ensuring high quality and timely delivery.",
+          "Supervised the assessment of all graphic materials to ensure quality and accuracy of the design.",
+          "Managed the entire project lifecycle from frontend to backend to DevOps.",
+          "Utilized technologies such as Next.js, React.js, Redux, NestJS, JWT, MongoDB, TypeORM, and AWS."
+        ]
+      },
+      {
+        "title": "Gigmee",
+        "duration": "2024 June - 2024 November",
+        "description": "Gigmee - A freelance platform that helps business owners find workers.",
+        "responsibilities": [
+          "Managed up to 5 projects or tasks at a given time while under pressure.",
+          "Recommended and consulted with clients on the most appropriate graphic design.",
+          "Created 4+ design presentations and proposals a month for clients and account managers.",
+          "Led the development from frontend to backend to DevOps.",
+          "Utilized technologies such as Vite, React, Redux, RTK Query, Microservices, NodeJs, ExpressJs, AWS, Elasticsearch, Kibana, Redis, MongoDB, Postgres, MySQL, SocketIO, RabbitMQ, Kubernetes, and Jenkins."
+        ]
+      }
+    ]
   },
   "skills": {
     "title": "Skills",
@@ -70,7 +97,8 @@
     "landingPages": "Landing Pages",
     "ecommerce": "E-Commerce",
     "other": "Other",
-    "manager": "Manager - Tasks Management Application"
+    "manager": "Manager - Tasks Management Application",
+    "beaura": "Beaura - Ai-Powered Hair Styling App"
   },
   "contact": {
     "title": "Contact",
