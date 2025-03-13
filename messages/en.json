@@ -63,10 +63,10 @@
         "duration": "2024 June - 2024 November",
         "description": "Gigmee - A freelance platform that helps business owners find workers.",
         "responsibilities": [
-          "Managed up to 5 projects or tasks at a given time while under pressure.",
-          "Recommended and consulted with clients on the most appropriate graphic design.",
-          "Created 4+ design presentations and proposals a month for clients and account managers.",
-          "Led the development from frontend to backend to DevOps.",
+          "Managed multiple projects simultaneously, ensuring timely delivery and high-quality outcomes.",
+          "Worked closely with clients to understand their requirements and deliver tailored solutions.",
+          "Developed and maintained the platform's front-end and back-end components, ensuring seamless integration and performance.",
+          "Oversaw the entire development process, from frontend to backend to DevOps.",
           "Utilized technologies such as Vite, React, Redux, RTK Query, Microservices, NodeJs, ExpressJs, AWS, Elasticsearch, Kibana, Redis, MongoDB, Postgres, MySQL, SocketIO, RabbitMQ, Kubernetes, and Jenkins."
         ]
       }
