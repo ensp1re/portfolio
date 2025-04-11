@@ -101,6 +101,15 @@ const Projects: FC = (): ReactElement => {
             {t("ecommerce")}
           </button>
           <button
+            onClick={() => handleFilterChange("blockchain")}
+            className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "blockchain"
+              ? "bg-sky-400 text-white"
+              : "bg-white border border-gray-300 hover:bg-gray-100"
+              }`}
+          >
+            {t("blockchain")}
+          </button>
+          <button
             onClick={() => handleFilterChange("other")}
             className={`px-4 py-2 rounded-md text-sm md:text-base ${filter === "other"
               ? "bg-sky-400 text-white"

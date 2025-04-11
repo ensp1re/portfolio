@@ -196,6 +196,61 @@ export const projectData: ICardComponent[] = [
     ],
     github: "https://github.com/ensp1re/beaura-client",
     category: "saas",
+  },
+  {
+    title: "Succinct Stats - Testnet Statistics",
+    href: "https://www.succinct-stats.xyz/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390052/Screenshot_2025-04-11_194206_tqzkt8.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390053/Screenshot_2025-04-11_194243_s7p7p0.png",
+    ],
+    github: "https://github.com/ensp1re/succinct-stats",
+    category: "other",
+  },
+  {
+    title: "Battleship - SP1 game",
+    href: "https://battleship-succinct.vercel.app/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390054/Screenshot_2025-04-11_194623_njn8w1.png",
+    ],
+    github: "https://github.com/ensp1re/Battleship",
+    category: "other",
+  }, {
+    title: "IQ quiz - Quiz Game using SP1",
+    href: "https://iq-quiz-opal.vercel.app/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390053/Screenshot_2025-04-11_194354_v1ixup.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390053/Screenshot_2025-04-11_194440_rjhf7p.png",
+    ],
+    github: "https://github.com/ensp1re/Quiz",
+    category: "other",
+  }, {
+    title: "Dice - SP1 game",
+    href: "https://dice-succinct.vercel.app/",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390053/Screenshot_2025-04-11_194307_wjpgqs.png",
+    ],
+    github: "https://github.com/ensp1re/Dice",
+    category: "other",
+  }, {
+    title: "Seismint - DEX on Seismic",
+    href: "https://www.seismint.xyz",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390052/Screenshot_2025-04-11_193820_qc1mc2.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390052/Screenshot_2025-04-11_193848_mbfwwp.png",
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390052/Screenshot_2025-04-11_193920_inuu69.png",
+    ],
+    github: "https://github.com/ensp1re/seismint",
+    category: "blockchain",
+  }, {
+    title: "Tron Exchange - swap on Tron",
+    href: "https://tron-exchange.vercel.app",
+    images: [
+      "https://res.cloudinary.com/dzivbyc4z/image/upload/v1744390053/Screenshot_2025-04-11_194330_dk4pjx.png"
+    ],
+
+    github: "https://github.com/ensp1re/Tron-Exchange",
+    category: "blockchain",
   }
 
   // {
